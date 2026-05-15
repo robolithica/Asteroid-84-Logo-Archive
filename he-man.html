@@ -1,3 +1,211 @@
-<h1>He-Man and the Masters of the Universe</h1>
-<p>Logo Archive page (placeholder).</p>
-<a href="index.html">Back to the Franchise Index</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>80s Image Museum</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #03001e;
+      font-family: 'Courier New', Courier, monospace;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Animated 80s Grid Background */
+    .grid-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      perspective: 500px;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .grid {
+      position: absolute;
+      bottom: -100px;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background-image: 
+        linear-gradient(to right, #ff007f 2px, transparent 2px),
+        linear-gradient(to bottom, #ff007f 2px, transparent 2px);
+      background-size: 60px 60px;
+      transform: rotateX(60deg);
+      animation: gridMove 10s linear infinite;
+    }
+
+    @keyframes gridMove {
+      0% { transform: rotateX(60deg) translateY(0); }
+      100% { transform: rotateX(60deg) translateY(60px); }
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: #fff;
+      text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 40px #00f0ff, 0 0 80px #00f0ff;
+      margin: 0;
+    }
+
+    p {
+      color: #00f0ff;
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      text-shadow: 0 0 5px #00f0ff;
+      margin-top: 0.5rem;
+    }
+
+    /* Museum Gallery Grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+      padding: 2rem 5vw;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* CRT Monitor / Frame Style */
+    .card {
+      background: #100b21;
+      border: 3px solid #ff007f;
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 
+        0 0 15px rgba(255, 0, 127, 0.4), 
+        inset 0 0 15px rgba(255, 0, 127, 0.2);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* CRT screen glare effect */
+      position: relative;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(rgba(255,255,255,0.03) 50%, rgba(0,0,0,0.2) 50%);
+      background-size: 100% 4px;
+      pointer-events: none;
+      border-radius: 12px;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      border-color: #00f0ff;
+      box-shadow: 
+        0 0 25px rgba(0, 240, 255, 0.6), 
+        inset 0 0 25px rgba(0, 240, 255, 0.3);
+    }
+
+    /* Image Wrapper */
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      /* Adding a vintage magenta/cyan filter effect */
+      filter: contrast(1.2) saturate(1.1);
+      transition: filter 0.3s ease;
+    }
+
+    .card:hover img {
+      filter: contrast(1.4) saturate(1.5);
+    }
+
+    /* Image Title */
+    .card h3 {
+      color: #ffff00;
+      text-shadow: 0 0 5px #ffff00;
+      margin: 1.5rem 0 0.5rem;
+      text-align: center;
+    }
+
+    .card p {
+      color: #fff;
+      font-size: 0.9rem;
+      text-align: center;
+      margin: 0;
+      text-shadow: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Animated Synthwave Grid -->
+  <div class="grid-container">
+    <div class="grid"></div>
+  </div>
+
+  <!-- Page Header -->
+  <header>
+    <h1>Neon Archive</h1>
+    <p>A Retro Digital Image Museum</p>
+  </header>
+
+  <!-- Image Gallery -->
+  <div class="gallery">
+
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="https://unsplash.com" alt="Arcade Cabinet">
+      <h3>Retro Gaming</h3>
+      <p>Pixelated dreams from the golden age.</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="https://unsplash.com" alt="Neon Skyline">
+      <h3>Synth City</h3>
+      <p>Where the horizon glows with pure magenta.</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="https://unsplash.com" alt="Abstract 80s Vibe">
+      <h3>Analog Dreams</h3>
+      <p>Vaporwave textures and electric glows.</p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <img src="https://unsplash.com" alt="Cassette Tape">
+      <h3>Mixtape 1984</h3>
+      <p>Rewinding the sound of a generation.</p>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+      <img src="https://unsplash.com" alt="Neon Sunglasses">
+      <h3>Rad Shades</h3>
+      <p>Too cool for the neon grid.</p>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card">
+      <img src="https://unsplash.com" alt="Computer Setup">
+      <h3>Cyber Terminal</h3>
+      <p>Logging into the mainframe.</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
+
