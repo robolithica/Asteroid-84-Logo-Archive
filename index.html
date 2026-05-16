@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cartoon Logo Database</title>
+
   <style>
+
     /* Global Styles */
     body {
       margin: 0;
@@ -29,11 +31,11 @@
 
     .grid {
       position: absolute;
-      bottom: -100px;
+      bottom: -250px;
       left: -50%;
       width: 200%;
       height: 200%;
-      background-image: 
+      background-image:
         linear-gradient(to right, #00f0ff 2px, transparent 2px),
         linear-gradient(to bottom, #00f0ff 2px, transparent 2px);
       background-size: 60px 60px;
@@ -42,8 +44,13 @@
     }
 
     @keyframes gridMove {
-      0% { transform: rotateX(60deg) translateY(0); }
-      100% { transform: rotateX(60deg) translateY(60px); }
+      0% {
+        transform: rotateX(60deg) translateY(0);
+      }
+
+      100% {
+        transform: rotateX(60deg) translateY(60px);
+      }
     }
 
     /* Header */
@@ -52,13 +59,12 @@
       padding: 3rem 1rem;
     }
 
-    h1 {
-      font-size: 3.5rem;
-      text-transform: uppercase;
-      letter-spacing: 5px;
-      color: #fff;
-      text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 40px #00f0ff, 0 0 80px #00f0ff;
-      margin: 0;
+    header img {
+      display: block;
+      margin: 0 auto;
+      max-width: 700px;
+      width: 100%;
+      height: auto;
     }
 
     p {
@@ -85,22 +91,29 @@
       border: 3px solid #00f0ff;
       border-radius: 15px;
       padding: 15px;
-      box-shadow: 
-        0 0 15px rgba(255, 0, 127, 0.4), 
+      box-shadow:
+        0 0 15px rgba(255, 0, 127, 0.4),
         inset 0 0 15px rgba(255, 0, 127, 0.2);
       transition: all 0.3s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* CRT screen glare effect */
       position: relative;
+      text-decoration: none;
+      color: inherit;
     }
 
     .card::after {
       content: "";
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(rgba(255,255,255,0.03) 50%, rgba(0,0,0,0.2) 50%);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        rgba(255,255,255,0.03) 50%,
+        rgba(0,0,0,0.2) 50%
+      );
       background-size: 100% 4px;
       pointer-events: none;
       border-radius: 12px;
@@ -109,18 +122,18 @@
     .card:hover {
       transform: translateY(-10px) scale(1.03);
       border-color: #00f0ff;
-      box-shadow: 
-        0 0 25px rgba(0, 240, 255, 0.6), 
+      box-shadow:
+        0 0 25px rgba(0, 240, 255, 0.6),
         inset 0 0 25px rgba(0, 240, 255, 0.3);
     }
 
-    /* Image Wrapper */
+    /* Card Images */
     .card img {
-      width: 75%;
-      height: 75%;
-      object-fit: cover;
+      width: 100%;
+      height: auto;
+      max-height: 220px;
+      object-fit: contain;
       border-radius: 10px;
-      /* Adding a vintage magenta/cyan filter effect */
       filter: contrast(1.2) saturate(1.1);
       transition: filter 0.3s ease;
     }
@@ -144,8 +157,11 @@
       margin: 0;
       text-shadow: none;
     }
+
   </style>
+
 </head>
+
 <body>
 
   <!-- Animated Synthwave Grid -->
@@ -155,36 +171,52 @@
 
   <!-- Page Header -->
   <header>
-    <img src="Asteroid 84 Logo.png">
-    
-    <p>A Museum of 70s-80s-90s Cartoon, Toy, and Comic Book Logos</p>
+
+    <img src="Asteroid 84 Logo.png" alt="Cartoon Logo Database Logo">
+
+    <p>
+      A Museum of 70s-80s-90s Cartoon, Toy, and Comic Book Logos
+    </p>
+
   </header>
 
   <!-- Image Gallery -->
   <div class="gallery">
 
     <!-- Card 1 -->
-    <div class="card">
+    <a class="card" href="he-man.html">
+
       <img src="Cartoons Main Link.png" alt="Cartoons">
+
       <h3>Cartoons</h3>
+
       <p>Saturday Morning Rituals</p>
-    </div>
+
+    </a>
 
     <!-- Card 2 -->
     <div class="card">
-      <img src="https://unsplash.com" alt="Toys">
+
+      <img src="Cartoons Main Link.png" alt="Toys">
+
       <h3>Toylines</h3>
+
       <p>Highly Addictive Plastic</p>
+
     </div>
 
     <!-- Card 3 -->
     <div class="card">
-      <img src="https://unsplash.com" alt="Comic Books">
+
+      <img src="Cartoons Main Link.png" alt="Comic Books">
+
       <h3>Comics</h3>
+
       <p>Newsprint That Fired Our Imaginations</p>
+
     </div>
+
+  </div>
 
 </body>
 </html>
-
-
