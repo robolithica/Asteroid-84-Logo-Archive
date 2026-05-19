@@ -41,28 +41,24 @@ body::before {
     background-size: 60px 60px;
 
     /* Perspective grid */
-    transform:
-        perspective(1200px)
-        rotateX(78deg);
+    transform: none;
 
     transform-origin: top left;
 
     /* Makes grid fade diagonally from top-left to bottom-right */
     mask-image: linear-gradient(
-        to bottom right,
-        rgba(255,255,255,0.95) 0%,
-        rgba(255,255,255,0.55) 45%,
-        rgba(255,255,255,0.15) 75%,
-        rgba(255,255,255,0) 100%
-    );
+    to bottom,
+    rgba(255,255,255,1) 0%,
+    rgba(255,255,255,0.6) 50%,
+    rgba(255,255,255,0) 100%
+);
 
-    -webkit-mask-image: linear-gradient(
-        to bottom right,
-        rgba(255,255,255,0.95) 0%,
-        rgba(255,255,255,0.55) 45%,
-        rgba(255,255,255,0.15) 75%,
-        rgba(255,255,255,0) 100%
-    );
+-webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(255,255,255,1) 0%,
+    rgba(255,255,255,0.6) 50%,
+    rgba(255,255,255,0) 100%
+);
 
     opacity: 1;
 
