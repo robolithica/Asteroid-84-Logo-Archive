@@ -20,48 +20,56 @@
         position: relative;
     }
 
-    /* Background Grid */
-    body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
+  /* Background Grid */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
 
-        background-image:
-            linear-gradient(
-                rgba(255, 40, 140, 0.18) 1px,
-                transparent 1px
-            ),
-            linear-gradient(
-                90deg,
-                rgba(255, 40, 140, 0.18) 1px,
-                transparent 1px
-            );
-
-        background-size: 50px 50px;
-
-        transform: perspective(900px) rotateX(72deg);
-
-        transform-origin: top;
-
-        opacity: 0.65;
-
-        mask-image: linear-gradient(
-            to bottom right,
-            rgba(255,255,255,1) 0%,
-            rgba(255,255,255,0.15) 75%,
-            rgba(255,255,255,0) 100%
+    background-image:
+        linear-gradient(
+            rgba(255, 40, 140, 0.32) 2px,
+            transparent 2px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 40, 140, 0.32) 2px,
+            transparent 2px
         );
 
-        -webkit-mask-image: linear-gradient(
-            to bottom right,
-            rgba(255,255,255,1) 0%,
-            rgba(255,255,255,0.15) 75%,
-            rgba(255,255,255,0) 100%
-        );
+    background-size: 60px 60px;
 
-        z-index: -2;
-    }
+    /* Perspective grid */
+    transform:
+        perspective(1200px)
+        rotateX(78deg);
 
+    transform-origin: top left;
+
+    /* Makes grid fade diagonally from top-left to bottom-right */
+    mask-image: linear-gradient(
+        to bottom right,
+        rgba(255,255,255,0.95) 0%,
+        rgba(255,255,255,0.55) 45%,
+        rgba(255,255,255,0.15) 75%,
+        rgba(255,255,255,0) 100%
+    );
+
+    -webkit-mask-image: linear-gradient(
+        to bottom right,
+        rgba(255,255,255,0.95) 0%,
+        rgba(255,255,255,0.55) 45%,
+        rgba(255,255,255,0.15) 75%,
+        rgba(255,255,255,0) 100%
+    );
+
+    opacity: 1;
+
+    /* Soft neon glow */
+    filter:
+        drop-shadow(0 0 6px rgba(255, 0, 140, 0.5));
+}
     /* Optional subtle glow */
     body::after {
         content: "";
