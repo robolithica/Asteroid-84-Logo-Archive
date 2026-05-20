@@ -102,24 +102,35 @@ body::before {
         
     }
 
-   .floating-nav {
-  position: fixed;   /* Keeps it in the same spot while scrolling */
-  top: 20px;         /* Distance from the top of the window */
-  right: 20px;       /* Distance from the right edge */
-  z-index: 9999;     /* Ensures it stays on top of other content */
-  display: flex;     /* Aligns buttons in a row */
+ .floating-nav {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+
+  display: flex;
   flex-direction: column;
-   align-items: center;
-  gap: 10px;         /* Adds space between buttons */
+  gap: 12px;
+  align-items: flex-end;
 }
 
-.floating-nav button {
-  padding: 10px 15px;
+.nav-btn img {
+  width: 140px;
+  height: auto;
+  display: block;
+
   cursor: pointer;
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 5px;
+
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.nav-btn img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.8));
+}
+
+.nav-btn img:active {
+  transform: scale(0.98);
 }
 
     .page-info {
@@ -209,9 +220,19 @@ body::before {
     </header>
 
    <nav class="floating-nav">
-  <button onclick="location.href='#home'">Home</button>
-  <button onclick="location.href='#about'">About</button>
-  <button onclick="location.href='#contact'">Contact</button>
+
+  <a class="nav-btn" href="#home">
+    <img src="HOMENavButton.png" alt="Home">
+  </a>
+
+  <a class="nav-btn" href="#about">
+    <img src="about-button.png" alt="About">
+  </a>
+
+  <a class="nav-btn" href="#contact">
+    <img src="contact-button.png" alt="Contact">
+  </a>
+
 </nav>
 
     <section class="gallery">
