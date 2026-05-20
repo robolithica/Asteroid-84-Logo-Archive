@@ -123,7 +123,29 @@ body::before {
 
   transition: transform 0.15s ease, filter 0.15s ease;
 }
+   
+@media (max-width: 700px) {
 
+  .floating-nav {
+    top: 0;
+    right: 0;
+    left: 0;
+
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    gap: 10px;
+
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(6px);
+  }
+
+  .nav-btn img {
+    width: 90px; /* smaller buttons for mobile */
+  }
+}
 .nav-btn img:hover {
   transform: scale(1.05);
   filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.8));
