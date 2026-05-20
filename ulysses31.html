@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ulysses 31</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #000;
+        color: #ffffff;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+  /* Background Grid */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 40, 140, 0.32) 2px,
+            transparent 2px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 40, 140, 0.32) 2px,
+            transparent 2px
+        );
+
+    background-size: 60px 60px;
+
+    /* Perspective grid */
+    transform: none;
+
+    transform-origin: top left;
+
+    /* Makes grid fade diagonally from top-left to bottom-right */
+    mask-image: linear-gradient(
+    to bottom,
+    rgba(255,255,255,1) 0%,
+    rgba(255,255,255,0.6) 50%,
+    rgba(255,255,255,0) 100%
+);
+
+-webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(255,255,255,1) 0%,
+    rgba(255,255,255,0.6) 50%,
+    rgba(255,255,255,0) 100%
+);
+
+    opacity: 1;
+
+    /* Soft neon glow */
+    filter:
+        drop-shadow(0 0 6px rgba(255, 0, 140, 0.5));
+}
+    /* Optional subtle glow */
+    body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background:
+            radial-gradient(
+                circle at top left,
+                rgba(255, 0, 140, 0.12),
+                transparent 50%
+            );
+        z-index: -3;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 20px 80px;
+    }
+
+    .page-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .page-title {
+        font-size: clamp(0.75rem, 2.5vw, 5rem);
+        color: #ff4fa3;
+        letter-spacing: 4px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+
+        
+    }
+
+    .page-info {
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.7;
+        color: #cccccc;
+        font-size: 1rem;
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .gallery-item {
+        width: 100%;
+        max-width: 900px;
+        text-align: center;
+    }
+
+   .gallery-item img {
+    width: auto;
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+
+
+        border: 2px solid rgba(255, 70, 160, 0.5);
+
+    }
+
+   .intro-text {
+      margin-bottom: 1.5rem;
+   }
+    .gallery-item img:hover {
+        transform: scale(1.01);
+
+        box-shadow:
+            0 0 20px rgba(255, 0, 140, 0.6),
+            0 0 40px rgba(255, 0, 140, 0.25);
+    }
+
+    .caption {
+        margin-top: 14px;
+        color: #bbbbbb;
+        font-size: 0.95rem;
+        letter-spacing: 1px;
+    }
+
+    @media (max-width: 768px) {
+        body::before {
+            background-size: 35px 35px;
+        }
+
+        .container {
+            padding-top: 40px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header class="page-header">
+        <h1 class="page-title">Ulysses 31</h1>
+
+       <p class="page-info intro-text">
+            Ulysses 31 info
+           </p>
+       <p class="page-info">
+            Original Release: 
+           </p>
+       <p class="page-info">
+            Episode Total: 
+       </p>
+       <p class="page-info">
+            Studio: 
+       </p>
+       <p class="page-info">
+            Logo Designed By: 
+        </p>
+    </header>
+
+    <section class="gallery">
+
+        <div class="gallery-item">
+            <img src="U31-CL1.png" alt="Ulysses 31 Cartoon Logo1">
+            <div class="caption">Primary Cartoon Logo - 1980</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="image2.jpg" alt="Gallery Image 2">
+            <div class="caption">Alternate Logo - 1980</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="image3.jpg" alt="Gallery Image 3">
+            <div class="caption">Image Caption 3</div>
+        </div>
+
+    </section>
+
+</div>
+
+</body>
+</html>
