@@ -102,6 +102,24 @@ body::before {
         
     }
 
+   .floating-nav {
+  position: fixed;   /* Keeps it in the same spot while scrolling */
+  top: 20px;         /* Distance from the top of the window */
+  right: 20px;       /* Distance from the right edge */
+  z-index: 9999;     /* Ensures it stays on top of other content */
+  display: flex;     /* Aligns buttons in a row */
+  gap: 10px;         /* Adds space between buttons */
+}
+
+.floating-nav button {
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
     .page-info {
         max-width: 800px;
         margin: 0 auto;
@@ -187,6 +205,12 @@ body::before {
             Studio: DiC Audiovisuel, Tokyo Movie Shinsha, France 3, RTL
        </p>
     </header>
+
+   <nav class="floating-nav">
+  <button onclick="location.href='#home'">Home</button>
+  <button onclick="location.href='#about'">About</button>
+  <button onclick="location.href='#contact'">Contact</button>
+</nav>
 
     <section class="gallery">
 
