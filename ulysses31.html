@@ -217,12 +217,36 @@ body::before {
         .container {
             padding-top: 40px;
         }
+    .site-logo {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 10000;
+
+    display: block;
+}
+
+.site-logo img {
+    width: 90px;   /* adjust size as needed */
+    height: auto;
+
+    cursor: pointer;
+
+    transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.site-logo img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.8));
+}
     }
 </style>
 </head>
 
 <body>
-
+<a href="index.html" class="site-logo">
+    <img src="images/A84SmallLogo.png" alt="Site Logo">
+</a>
 <div class="container">
 
     <header class="page-header">
