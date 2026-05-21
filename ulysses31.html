@@ -208,16 +208,7 @@ body::before {
         font-size: 0.95rem;
         letter-spacing: 1px;
     }
-
-    @media (max-width: 768px) {
-        body::before {
-            background-size: 35px 35px;
-        }
-
-        .container {
-            padding-top: 40px;
-        }
-    .site-logo {
+      .site-logo {
     position: fixed;
     top: 100px;
     left: 100px;
@@ -239,6 +230,20 @@ body::before {
     transform: scale(1.05);
     filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.8));
 }
+
+    @media (max-width: 768px) {
+        body::before {
+            background-size: 35px 35px;
+        }
+
+        .container {
+            padding-top: 40px;
+        }
+ 
+        .site-logo {
+        top: 20px;
+        left: 20px;
+    }
     }
 </style>
 </head>
