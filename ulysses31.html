@@ -23,73 +23,7 @@ background-attachment: fixed;
        
     }
 
-  /* Background Grid */
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -2;
-
-   
-    background-image:
-        linear-gradient(
-            rgba(255, 70, 160, 0.32) 2px,
-            transparent 2px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(255, 70, 160, 0.32) 2px,
-            transparent 2px
-        );
-
-    background-size: 60px 60px;
-
-    /* Perspective grid */
-    transform: none;
-
-    transform-origin: top left;
-
-    /* Makes grid fade diagonally from top-left to bottom-right */
-    mask-image: linear-gradient(
-    to bottom,
-    rgba(0,240,255,1) 0%,
-    rgba(0,240,255,0.6) 50%,
-    rgba(0,240,255,0) 100%
-);
-
--webkit-mask-image: linear-gradient(
-    to bottom,
-    rgba(0,240,255,1) 0%,
-    rgba(0,240,255,0.6) 50%,
-    rgba(0,240,255,0) 100%
-);
-
-    opacity: 1;
-
-    /* Soft neon glow */
-    filter:
-        drop-shadow(0 0 6px rgba(0, 240, 255, 0.5));
-}
-    /* Optional subtle glow */
-    body::after {
-        content: "";
-        position: fixed;
-        inset: 0;
-        background:
-            radial-gradient(
-                circle at top left,
-                rgba(0, 240, 255, 0.12),
-                transparent 50%
-            );
-        z-index: -3;
-    }
-
-    .container {
-        width: 90%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 60px 20px 80px;
-    }
+ 
 
     .page-header {
         text-align: center;
