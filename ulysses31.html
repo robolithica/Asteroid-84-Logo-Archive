@@ -171,10 +171,25 @@ background-attachment: fixed;
 
 /* DROPDOWN MENU */
 
-.logo-dropdown {
+logo-dropdown {
     position: absolute;
     top: 70px;
-    left: 0;
+    left: 50%;
+
+    transform: translateX(-50%) translateY(-10px);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+}
 
     display: flex;
     flex-direction: column;
@@ -197,7 +212,7 @@ background-attachment: fixed;
     opacity: 1;
     visibility: visible;
 
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
 }
 
 .logo-dropdown img {
