@@ -83,6 +83,21 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
+    .franchise-list::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        rgba(255,255,255,0.03) 50%,
+        rgba(0,0,0,0.2) 50%
+      );
+      background-size: 100% 4px;
+      pointer-events: none;
+      border-radius: 12px;
+    }
     
 /* tablet */
 @media (max-width: 900px) {
