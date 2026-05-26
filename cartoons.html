@@ -137,6 +137,21 @@ background-repeat: no-repeat;
       position: relative;
 overflow: hidden;
     }
+   
+    .franchise-link::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0,0,0,0.5);
+
+  z-index: 0;
+}
+    .franchise-link span {
+  position: relative;
+  z-index: 1;
+}
 
     .franchise-link:hover {
       transform: translateX(10px);
@@ -256,7 +271,7 @@ overflow: hidden;
       Transformers
     </a>
     <a class="franchise-link" href="PAGES/ulysses31.html" style="background-image: url('IMAGES/U31-FrLink.JPG');">
-      Ulysses 31
+      <span>Ulysses 31</span>
     </a>
     
   </div>
