@@ -6,6 +6,15 @@
 <title>Beverly Hills Teens</title>
 
 <style>
+
+   @font-face {
+    font-family: 'IBMDOS';
+
+    src: url('../FONTS/IBM_DOS_ISO8.woff2') format('woff2');
+
+    font-weight: normal;
+    font-style: normal;
+}
     * {
         box-sizing: border-box;
         margin: 0;
@@ -13,9 +22,14 @@
     }
 
   body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'IBMDOS', monospaced;
     background-color: #000;
-    color: #07B5EA;
+    color: #39ff88;
+     letter-spacing: 1px;
+     text-shadow:
+        0 0 3px rgba(0, 255, 102, 0.9),
+        0 0 6px rgba(0, 255, 102, 0.6),
+        0 0 10px rgba(0, 255, 102, 0.35);
     overflow-x: hidden;
     position: relative;
 }
@@ -42,8 +56,8 @@ body::after {
 
     /* grid lines */
     background-image:
-        linear-gradient(to right, rgba(239, 0, 194, 0.35) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(239, 0, 194, 0.35) 1px, transparent 1px);
+        linear-gradient(to right, rgba(57, 255, 136, 0.25) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(57, 255, 136, 0.25) 1px, transparent 1px);
 
     background-size: 60px 60px;
 
@@ -62,7 +76,7 @@ body::after {
 
     .page-title {
         font-size: clamp(0.75rem, 2.5vw, 5rem);
-        color: #EF00C2;
+        color: inherit;
         letter-spacing: 4px;
         margin-bottom: 20px;
         text-transform: uppercase;
@@ -128,7 +142,7 @@ body::after {
         max-width: 800px;
         margin: 0 auto;
         line-height: 1.7;
-        color: #cccccc;
+        color: inherit;
         font-size: .75rem;
     }
 
@@ -151,6 +165,8 @@ body::after {
     max-width: 280px;
 
     text-align: center;
+   position: relative;
+overflow: visible;
 }
 
 .gallery-item img {
@@ -159,8 +175,23 @@ body::after {
 
     display: block;
 
-    border: 2px solid rgba(239, 0, 194, 0.5);
+    border: 2px solid rgba(57, 255, 136, 0.5);
 }
+   .gallery-item::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        rgba(255,255,255,0.03) 50%,
+        rgba(0,0,0,0.2) 50%
+      );
+      background-size: 100% 4px;
+      pointer-events: none;
+      border-radius: 12px;
+    }
 
    .intro-text {
       margin-bottom: 1.5rem;
@@ -169,13 +200,14 @@ body::after {
         transform: scale(1.01);
 
         box-shadow:
-            0 0 20px rgba(239, 0, 194, 0.6),
-            0 0 40px rgba(239, 0, 194, 0.25);
+            0 0 20px rgba(57, 255, 136, 0.6),
+            0 0 40px rgba(57, 255, 136, 0.25);
     }
 
     .caption {
         margin-top: 14px;
-        color: #bbbbbb;
+        color: #39ff88;
+       text-shadow: none;
         font-size: 0.55rem;
         letter-spacing: 1px;
     }
@@ -328,7 +360,10 @@ body::after {
         <h1 class="page-title">Beverly Hills Teens</h1>
 
        <p class="page-info intro-text">
-            BHT INFO
+            Though it predated Beverly Hills 90210, this animated series attempted to bring
+          the same basic show to the 5-8 year old demographic. Ridiculously wealthy teens in
+          Beverly Hills navigating school and their social circles and using money and influence
+          to solve all their problems.
            </p>
        <a class="page-info">
             Original Release: Sep 21, 1987
@@ -338,7 +373,7 @@ body::after {
             Episode Total: 65
        </a>
        <p class="page-info">
-            Studios: DiC
+            Studios: DiC Entertainment
        </p>
 <p class="page-info">
         <a class="page-info" href="https://en.wikipedia.org/wiki/Beverly_Hills_Teens" 
@@ -351,7 +386,7 @@ target="_blank">
         <a class="page-info" 
 
 href="https://tvtropes.org/pmwiki/pmwiki.php/WesternAnimation/BeverlyHillsTeens" target="blank">
-           BHT - TVTropes
+            BHT - TVTropes
        </a>
        </p>
     </header>
@@ -361,29 +396,24 @@ href="https://tvtropes.org/pmwiki/pmwiki.php/WesternAnimation/BeverlyHillsTeens"
     <section class="gallery">
 
         <div class="gallery-item">
-            <img src="../IMAGES/BHT-TN1.png"
+            <img src="../IMAGES/BHT-CL1.png"
   data-full="../IMAGES/BHT-CL1.png"
-  alt="BHT Cartoon Logo1">
-           <div class="caption">Primary Cartoon Logo<br>
-              North America</div>
+  alt="Beverly Hills Teens Cartoon Logo1">
+           <div class="caption">Primary Cartoon Logo</div>
         </div>
-
-        <div class="gallery-item">
-            <img src="../IMAGES/BHT-TN2.png"
+               <div class="gallery-item">
+            <img src="../IMAGES/BHT-CL2.png"
   data-full="../IMAGES/BHT-CL2.png"
-  alt="BHT Cartoon Logo1">
-           <div class="caption">Alternate Cartoon Logo<br>
-              </div>
+  alt="Beverly Hills Teens Cartoon Logo2">
+           <div class="caption">Alternate Cartoon Logo</div>
         </div>
-
-        <div class="gallery-item">
-            <img src="../IMAGES/BHT-TN3.png"
-  data-full="../IMAGES/BHT-CL3.png"
-  alt="BHT Cartoon Logo1">
-           <div class="caption">Alternate VHS Logo 1987<br>
-              </div>
+       
+       <div class="gallery-item">
+            <img src="../IMAGES/BHT-AL1.png"
+  data-full="../IMAGES/BHT-AL1.png"
+  alt="Beverly Hills Teens Alt Cartoon Logo1">
+           <div class="caption">Alternate VHS Cartoon Logo</div>
         </div>
-
     </section>
 
 </div>
@@ -435,11 +465,11 @@ href="https://tvtropes.org/pmwiki/pmwiki.php/WesternAnimation/BeverlyHillsTeens"
     max-width: 90%;
     max-height: 82vh;
 
-    border: 2px solid rgba(239, 0, 194, 0.7);
+    border: 2px solid rgba(57, 255, 136, 0.7);
 
     box-shadow:
-        0 0 25px rgba(239, 0, 194, 0.5),
-        0 0 60px rgba(239, 0, 194, 0.2);
+        0 0 25px rgba(57, 255, 136, 0.5),
+        0 0 60px rgba(57, 255, 136, 0.2);
 
     animation: lightboxZoom 0.25s ease;
 }
@@ -459,7 +489,7 @@ href="https://tvtropes.org/pmwiki/pmwiki.php/WesternAnimation/BeverlyHillsTeens"
     right: 30px;
 
     font-size: 3rem;
-    color: #EF00C2;
+    color: #00f0ff;
 
     cursor: pointer;
 
@@ -472,8 +502,8 @@ href="https://tvtropes.org/pmwiki/pmwiki.php/WesternAnimation/BeverlyHillsTeens"
     transform: scale(1.1);
 
     text-shadow:
-        0 0 10px rgba(239, 0, 194, 0.8),
-        0 0 25px rgba(239, 0, 194, 0.5);
+        0 0 10px rgba(0, 240, 255, 0.8),
+        0 0 25px rgba(0, 240, 255, 0.5);
 }
 
 .gallery-item img {
@@ -558,10 +588,11 @@ document.addEventListener("keydown", (e) => {
 
 </script>
 <footer class="page footer">
-   <div class="page-info" style="margin-top: 40px; font-size: 0.6rem; color: #888;">
-    All artwork, images, and layouts created and arranged by the site owner unless otherwise noted.
-    Characters, logos, and original designs referenced on this page are the property of their respective copyright holders.
-    This site is an unofficial, non-commercial fan/reference project and is not affiliated with or endorsed by any rights holders.
+   <div class="page-info" style="margin-top: 40px; font-size: 0.6rem; text-shadow: none; color: #39ff88;">
+    “All site design and presentation are created by the site owner. Images are fan-made recreations
+      and visual interpretations based on existing properties. All characters, logos, and source materials
+      remain the property of their respective rights holders. This site is an unofficial, non-commercial
+      fan/reference project and is not affiliated with or endorsed by any rights holders.
 </div> </footer>
 </body>
 </html>
