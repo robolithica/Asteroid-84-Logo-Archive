@@ -3,12 +3,18 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-   <title>Spider-Man and his Amazing Friends</title>
+<title>Spider-Man and his Amazing Friends</title>
 
 <style>
+
+   @font-face {
+    font-family: 'IBMDOS';
+
+    src: url('../FONTS/IBM_DOS_ISO8.woff2') format('woff2');
+
+    font-weight: normal;
+    font-style: normal;
+}
     * {
         box-sizing: border-box;
         margin: 0;
@@ -16,9 +22,14 @@
     }
 
   body {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'IBMDOS', monospaced;
     background-color: #000;
-    color: #07B5EA;
+    color: #39ff88;
+     letter-spacing: 1px;
+     text-shadow:
+        0 0 3px rgba(0, 255, 102, 0.9),
+        0 0 6px rgba(0, 255, 102, 0.6),
+        0 0 10px rgba(0, 255, 102, 0.35);
     overflow-x: hidden;
     position: relative;
 }
@@ -45,8 +56,8 @@ body::after {
 
     /* grid lines */
     background-image:
-        linear-gradient(to right, rgba(7, 181, 234, 0.35) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(7, 181, 234, 0.35) 1px, transparent 1px);
+        linear-gradient(to right, rgba(57, 255, 136, 0.25) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(57, 255, 136, 0.25) 1px, transparent 1px);
 
     background-size: 60px 60px;
 
@@ -65,7 +76,7 @@ body::after {
 
     .page-title {
         font-size: clamp(0.75rem, 2.5vw, 5rem);
-        color: #07B5EA;
+        color: inherit;
         letter-spacing: 4px;
         margin-bottom: 20px;
         text-transform: uppercase;
@@ -131,7 +142,7 @@ body::after {
         max-width: 800px;
         margin: 0 auto;
         line-height: 1.7;
-        color: #cccccc;
+        color: inherit;
         font-size: .75rem;
     }
 
@@ -155,7 +166,7 @@ body::after {
 
     text-align: center;
    position: relative;
-overflow: hidden;
+overflow: visible;
 }
 
 .gallery-item img {
@@ -164,7 +175,7 @@ overflow: hidden;
 
     display: block;
 
-    border: 2px solid rgba(7, 181, 234, 0.5);
+    border: 2px solid rgba(57, 255, 136, 0.5);
 }
    .gallery-item::after {
       content: "";
@@ -189,13 +200,14 @@ overflow: hidden;
         transform: scale(1.01);
 
         box-shadow:
-            0 0 20px rgba(7, 181, 234, 0.6),
-            0 0 40px rgba(7, 181, 234, 0.25);
+            0 0 20px rgba(57, 255, 136, 0.6),
+            0 0 40px rgba(57, 255, 136, 0.25);
     }
 
     .caption {
         margin-top: 14px;
-        color: #bbbbbb;
+        color: #39ff88;
+       text-shadow: none;
         font-size: 0.55rem;
         letter-spacing: 1px;
     }
@@ -347,6 +359,12 @@ overflow: hidden;
     <header class="page-header">
         <h1 class="page-title">Spider-Man and his Amazing Friends</h1>
 
+       <p class="page-info intro-text">
+            One of my favorite shows from the 1980s, Spider-Man and his Amazing Friends
+          featured a team up of Spider-Man, IceMan, and a mutant character created specifically
+          for this show, FireStar. They live together in Aunt May's house while they attend
+          college and save New York City from various random villains.
+           </p>
        <a class="page-info">
             Original Release: Sep 12, 1981
            </a>
@@ -361,14 +379,14 @@ overflow: hidden;
         <a class="page-info" href="https://en.wikipedia.org/wiki/Spider-Man_and_His_Amazing_Friends" 
 
 target="_blank">
-            Spider-Man & AF - Wiki
+            Spider-Man & HAF - Wiki
        </a>
 &ensp;
 
         <a class="page-info" 
 
 href="https://tvtropes.org/pmwiki/pmwiki.php/WesternAnimation/SpiderManAndHisAmazingFriends" target="blank">
-            Spider-Man & AF - TVTropes
+            Spider-Man & HAF - TVTropes
        </a>
        </p>
     </header>
@@ -380,11 +398,10 @@ href="https://tvtropes.org/pmwiki/pmwiki.php/WesternAnimation/SpiderManAndHisAma
         <div class="gallery-item">
             <img src="../IMAGES/SAF-CL1.png"
   data-full="../IMAGES/SAF-CL1.png"
-  alt="Spider-Man and his Amazing Friends Cartoon Logo1">
+  alt="Beverly Hills Teens Cartoon Logo1">
            <div class="caption">Primary Cartoon Logo</div>
         </div>
-       
-
+            
     </section>
 
 </div>
@@ -436,11 +453,11 @@ href="https://tvtropes.org/pmwiki/pmwiki.php/WesternAnimation/SpiderManAndHisAma
     max-width: 90%;
     max-height: 82vh;
 
-    border: 2px solid rgba(0, 240, 255, 0.7);
+    border: 2px solid rgba(57, 255, 136, 0.7);
 
     box-shadow:
-        0 0 25px rgba(0, 240, 255, 0.5),
-        0 0 60px rgba(0, 240, 255, 0.2);
+        0 0 25px rgba(57, 255, 136, 0.5),
+        0 0 60px rgba(57, 255, 136, 0.2);
 
     animation: lightboxZoom 0.25s ease;
 }
@@ -559,7 +576,7 @@ document.addEventListener("keydown", (e) => {
 
 </script>
 <footer class="page footer">
-   <div class="page-info" style="margin-top: 40px; font-size: 0.6rem; color: #888;">
+   <div class="page-info" style="margin-top: 40px; font-size: 0.6rem; text-shadow: none; color: #39ff88;">
     “All site design and presentation are created by the site owner. Images are fan-made recreations
       and visual interpretations based on existing properties. All characters, logos, and source materials
       remain the property of their respective rights holders. This site is an unofficial, non-commercial
