@@ -211,6 +211,48 @@ overflow: visible;
         font-size: 0.55rem;
         letter-spacing: 1px;
     }
+  /* VHS Rating - Upper Right */
+.franchise-rating {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    background: rgba(0, 0, 0, 0.75);
+    border: 2px solid #666;
+    border-radius: 6px;
+    z-index: 1000;
+
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+
+    backdrop-filter: blur(4px);
+}
+
+.franchise-rating img {
+    width: 32px;
+    height: auto;
+    display: block;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .franchise-rating {
+        top: 12px;
+        right: 12px;
+        padding: 4px 8px;
+        font-size: 0.9rem;
+    }
+
+    .franchise-rating img {
+        width: 24px;
+    }
+}
+   
       .site-logo-container {
     position: fixed;
     top: 20px;
@@ -354,7 +396,12 @@ overflow: visible;
     </div>
 
 </div>
-<div class="container">
+<!-- Franchise Rating -->
+<div class="franchise-rating">
+    <img src="images/vhs-icon.svg" alt="VHS Rating">
+    <span>8/10</span>
+</div>
+   <div class="container">
 
     <header class="page-header">
         <h1 class="page-title">Beverly Hills Teens</h1>
