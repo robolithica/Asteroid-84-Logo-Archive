@@ -3,23 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toys Franchises - Asteroid 84 Logo Database</title>
+  <title>Toy Franchises - Asteroid 84 Logo Database</title>
 
   <style>
 @font-face {
     font-family: 'IBMDOS';
 
-    src: url('../FONTS/IBM_DOS_ISO8.woff2') format('woff2');
+    src: url('FONTS/IBM_DOS_ISO8.woff2') format('woff2');
 
     font-weight: normal;
     font-style: normal;
 }
+
     body {
       margin: 0;
       padding: 0;
-      background-color: #000000;
+      background-color: #03001e;
       font-family: 'IBMDOS', monospace;
-      color: #39ff88;
+      color: #39ff88;;
       overflow-x: hidden;
     }
 
@@ -33,6 +34,7 @@
       perspective: 500px;
       z-index: -1;
       overflow: hidden;
+      background: url("IMAGES/starfield.png") center center / cover no-repeat;
     }
 
     .grid {
@@ -82,36 +84,89 @@
 
     /* Franchise List */
     .franchise-list {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  position: relative;
+      overflow: hidden;
+}
+    .franchise-link::after {
+  content: "";
 
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    rgba(255,255,255,0.03) 50%,
+    rgba(0,0,0,0.2) 50%
+  );
+
+  background-size: 100% 4px;
+
+  pointer-events: none;
+
+  border-radius: 12px;
+}
+    
+/* tablet */
+@media (max-width: 900px) {
+  .franchise-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* phone */
+@media (max-width: 600px) {
+  .franchise-list {
+    grid-template-columns: 1fr;
+  }
+}
+    
     .franchise-link {
       display: block;
-      background: #100b21;
+     background-color: #100b21;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
       border: 2px solid #00f0ff;
       border-radius: 12px;
       padding: 1.25rem 1.5rem;
       color: #FFFFFF;
       text-decoration: none;
-      font-size: 1.2rem;
+      font-size: 0.75rem;
       letter-spacing: 1px;
       transition: all 0.3s ease;
       box-shadow:
         0 0 12px rgba(0, 240, 255, 0.2),
         inset 0 0 10px rgba(0, 240, 255, 0.08);
+      position: relative;
+overflow: hidden;
     }
+   
+    .franchise-link::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0,0,0,0.5);
+
+  z-index: 0;
+}
+    .franchise-link span {
+  position: relative;
+  z-index: 1;
+}
 
     .franchise-link:hover {
       transform: translateX(10px);
-      border-color: #ffff00;
+      border-color: #39ff88;
       box-shadow:
-        0 0 20px rgba(255, 255, 0, 0.4),
-        inset 0 0 15px rgba(255, 255, 0, 0.15);
+        0 0 20px rgba(57, 255, 136, 0.4),
+        inset 0 0 15px rgba(57, 255, 136, 0.15);
     }
 
     /* Footer */
@@ -140,10 +195,10 @@
   <!-- Header -->
   <header>
 
-    <img src="Asteroid84 TOYS.png" alt="Toys Franchises">
+    <img src="Asteroid84 TOYS.png" alt="Toy Franchises">
 
     <p>
-      Browse Toys Franchise Logo Archives
+      Browse Toy Franchise Logo Archives
       Lots more on the way!
     </p>
 
@@ -152,26 +207,89 @@
   <!-- Franchise Links -->
   <div class="franchise-list">
 
-    <a class="franchise-link" href="gijoe.html">
+      <a class="franchise-link" href="PAGES/Beverly Hills Teens.html" style="background-image: url('IMAGES/BHT-FrLink.JPG');">
+      <span>Beverly Hills Teens</span>
+    </a>
+      <a class="franchise-link" href="PAGES/BraveStarr.html" style="background-image: url('IMAGES/BST-FrLink.jpg');">
+      <span>BraveStarr</span>
+    </a>
+      <a class="franchise-link" href="PAGES/Centurions.html" style="background-image: url('IMAGES/CNT-FrLink.jpg');">
+      <span>Centurions</span>
+    </a>
+    
+    <a class="franchise-link" href="PAGES/Denver the Last Dinosaur.html">
+      Denver the Last Dinosaur
+    </a>
+    
+    <a class="franchise-link" href="PAGES/DinoRiders.html">
+      Dino-Riders
+    </a>
+    
+    <a class="franchise-link" href="PAGES/Dinosaucers.html">
+      Dinosaucers
+    </a>
+
+    <a class="franchise-link" href="PAGES/GIJoe.html">
       G.I. Joe: A Real American Hero
     </a>
+    
+    <a class="franchise-link" href="PAGES/Heathcliff & the Catillac Cats.html">
+      Heathcliff & the Catillac Cats
+    </a>
 
-    <a class="franchise-link" href="heman.html">
+    <a class="franchise-link" href="PAGES/MOTU.html">
       He-Man and the Masters of the Universe
     </a>
-
-    <a class="franchise-link" href="transformers.html">
-      Transformers
+ 
+    <a class="franchise-link" href="PAGES/InspectorGadget.html" style="background-image: url('IMAGES/IPG-FrLink.jpg');">
+      <span>Inspector Gadget</span>
     </a>
-
-    <a class="franchise-link" href="thundercats.html">
-      ThunderCats
+    
+    <a class="franchise-link" href="PAGES/Jem.html">
+      Jem
     </a>
-
-    <a class="franchise-link" href="silverhawks.html">
+    
+    <a class="franchise-link" href="PAGES/My Little Pony N' Friends.html">
+      My Little Pony N' Friends
+    </a>
+    
+    <a class="franchise-link" href="PAGES/Pound Puppies.html">
+      Pound Puppies
+    </a>
+    
+    <a class="franchise-link" href="PAGES/Rainbow Brite.html">
+      Rainbow Brite
+    </a>
+    
+    <a class="franchise-link" href="PAGES/Sectaurs.html">
+      Sectaurs: Warriors of Symbion
+    </a>
+    
+    <a class="franchise-link" href="PAGES/SheRa.html">
+      She-Ra: Princess of Power
+    </a>
+    
+    <a class="franchise-link" href="PAGES/silverhawks.html">
       SilverHawks
     </a>
+    
+    <a class="franchise-link" href="PAGES/SpiderManAmazingFriends.html"
+      style="background-image: url('IMAGES/SAF-FrLink.JPG');">
+      <span>Spider-Man and his Amazing Friends</span>
+    </a>
 
+    
+    <a class="franchise-link" href="PAGES/thundercats.html">
+      ThunderCats
+    </a>
+    
+    <a class="franchise-link" href="PAGES/transformers.html">
+      Transformers
+    </a>
+    <a class="franchise-link" href="PAGES/ulysses31.html" style="background-image: url('IMAGES/U31-FrLink.JPG');">
+      <span>Ulysses 31</span>
+    </a>
+    
   </div>
 
   <!-- Footer -->
