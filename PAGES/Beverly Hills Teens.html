@@ -211,29 +211,57 @@ overflow: visible;
         font-size: 0.55rem;
         letter-spacing: 1px;
     }
-  /* VHS Rating - Upper Right */
+  
+   
+      .site-logo-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10000;
+    padding-bottom: 20px;
+}
+/* VHS Rating - Upper Right */
 .franchise-rating {
     position: fixed;
     top: 20px;
     right: 20px;
+
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 8px;
-    padding: 6px 12px;
+
+    gap: 6px;
+    padding: 8px 12px;
+
     background: rgba(0, 0, 0, 0.75);
     border: 2px solid #666;
     border-radius: 6px;
-    z-index: 1000;
 
-    font-family: 'IBMDOS';
-    font-size: 1rem;
-    font-weight: bold;
-    color: #39FF88;
+    z-index: 1000;
 
     backdrop-filter: blur(4px);
 }
 
-.franchise-rating img {
+.rating-label {
+    font-family: 'IBMDOS';
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #39ff88;
+}
+
+.rating-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-family: 'IBMDOS;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #39FF88;
+}
+
+.rating-content img {
     width: 32px;
     height: auto;
     display: block;
@@ -244,23 +272,21 @@ overflow: visible;
     .franchise-rating {
         top: 12px;
         right: 12px;
-        padding: 4px 8px;
+        padding: 6px 10px;
+    }
+
+    .rating-label {
+        font-size: 0.6rem;
+    }
+
+    .rating-content {
         font-size: 0.9rem;
     }
 
-    .franchise-rating img {
+    .rating-content img {
         width: 24px;
     }
 }
-   
-      .site-logo-container {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 10000;
-    padding-bottom: 20px;
-}
-
 .site-logo img {
     width: 55px;
     height: auto;
@@ -398,8 +424,12 @@ overflow: visible;
 </div>
 <!-- Franchise Rating -->
 <div class="franchise-rating">
-    <img src="../IMAGES/vhs-icon.svg" alt="VHS Rating">
-    <span>8/10</span>
+    <div class="rating-label">ASTEROID RATING</div>
+
+    <div class="rating-content">
+        <img src="../IMAGES/vhs-icon.svg" alt="VHS Rating">
+        <span>8/10</span>
+    </div>
 </div>
    <div class="container">
 
