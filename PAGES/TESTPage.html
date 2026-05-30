@@ -702,6 +702,26 @@ document.addEventListener("keydown", (e) => {
 });
 
 </script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const writing = 2;
+    const visuals = 5;
+    const characters = 2;
+    const music = 4;
+    const nostalgia = 3;
+
+    const overall =
+        (writing * 0.35 +
+        visuals * 0.30 +
+        characters * 0.20 +
+        music * 0.15 +
+        nostalgia * 0.10);
+
+    const formatted = overall.toFixed(1);
+
+    document.querySelector(".rating-content span").textContent = formatted + "/10";
+    document.getElementById("tooltip-overall").textContent = formatted;
+});
 <footer class="page footer">
    <div class="page-info" style="margin-top: 40px; font-size: 0.6rem; text-shadow: none; color: #39ff88;">
     “All site design and presentation are created by the site owner. Images are fan-made recreations
