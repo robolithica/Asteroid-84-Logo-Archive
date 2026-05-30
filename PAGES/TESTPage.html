@@ -703,7 +703,7 @@ document.addEventListener("keydown", (e) => {
 
 </script>
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+   document.addEventListener("DOMContentLoaded", () => {
 
     const writing = 2;
     const visuals = 5;
@@ -720,9 +720,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const formatted = overall.toFixed(1);
 
-    document.querySelector("overall-score").textContent = formatted + "/10";
+    document.getElementById("overall-score").textContent = formatted + "/10";
     document.getElementById("tooltip-overall").textContent = formatted;
 });
+</script>
 <footer class="page footer">
    <div class="page-info" style="margin-top: 40px; font-size: 0.6rem; text-shadow: none; color: #39ff88;">
     “All site design and presentation are created by the site owner. Images are fan-made recreations
