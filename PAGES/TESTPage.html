@@ -455,7 +455,7 @@ overflow: visible;
 
     <div class="rating-content">
         <img src="../IMAGES/vhs-icon.svg" alt="Shred Rating">
-        <span>3/10</span>
+        <span id="overall-score">3/10</span>
     </div>
     <div class="rating-tooltip">
     C:\ASTEROID84\SCAN>
@@ -720,7 +720,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const formatted = overall.toFixed(1);
 
-    document.querySelector(".rating-content span").textContent = formatted + "/10";
+    document.querySelector("overall-score").textContent = formatted + "/10";
     document.getElementById("tooltip-overall").textContent = formatted;
 });
 <footer class="page footer">
