@@ -434,7 +434,20 @@ franchise-rating img:hover {
 
     <div class="rating-content">
         <img src="../IMAGES/vhs-icon.svg" alt="Shred Rating">
-        <span>3/10</span>
+        <span id="overall-score">0/10</span>
+    </div>
+
+    <div class="rating-tooltip">
+
+C:\ASTEROID84\SCAN>
+
+WRITING:      <span id="writing-score">2</span>/10
+VISUALS:      <span id="visual-score">5</span>/10
+CHARACTERS:   <span id="character-score">2</span>/10
+MUSIC:        <span id="music-score">4</span>/10
+
+OVERALL:      <span id="tooltip-overall">0</span>/10
+
     </div>
 </div>         
    <div class="container">
@@ -623,7 +636,40 @@ href="https://tvtropes.org/pmwiki/pmwiki.php/WesternAnimation/BeverlyHillsTeens"
 }
 
 </style>
+<script>
 
+// SHRED RATING CALCULATOR
+
+const writing = 2;
+const visuals = 5;
+const characters = 2;
+const music = 4;
+const nostalgia = 3;
+   
+const overall =
+(
+    writing * 0.35 +
+    visuals * 0.25 +
+    characters * 0.15 +
+    music * 0.15
+   nostalgia * 0.10
+).toFixed(1);
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    document.getElementById("overall-score").textContent =
+        overall + "/10";
+
+    document.getElementById("tooltip-overall").textContent =
+        overall;
+
+});
+
+</script>
+
+<script>
+
+const lightbox = document.getElementById("lightbox");
 <script>
 
 const lightbox = document.getElementById("lightbox");
