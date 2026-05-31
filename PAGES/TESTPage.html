@@ -220,73 +220,6 @@ overflow: visible;
     z-index: 10000;
     padding-bottom: 20px;
 }
-/* VHS Rating - Upper Right */
-.franchise-rating {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    gap: 6px;
-    padding: 8px 12px;
-
-    background: rgba(0, 0, 0, 0.75);
-    border: 0px solid #666;
-    border-radius: 6px;
-
-    z-index: 1000;
-
-    backdrop-filter: blur(4px);
-}
-
-.rating-label {
-    font-family: 'IBMDOS';
-    font-size: 0.7rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #39ff88;
-}
-
-.rating-content {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    font-family: 'IBMDOS;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #39FF88;
-}
-
-.rating-content img {
-    width: 32px;
-    height: auto;
-    display: block;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    .franchise-rating {
-        top: 12px;
-        right: 12px;
-        padding: 6px 10px;
-    }
-
-    .rating-label {
-        font-size: 0.6rem;
-    }
-
-    .rating-content {
-        font-size: 0.9rem;
-    }
-
-    .rating-content img {
-        width: 24px;
-    }
-}
 .site-logo img {
     width: 55px;
     height: auto;
@@ -449,25 +382,7 @@ overflow: visible;
     </div>
 
 </div>
-<!-- Franchise Rating -->
-<div class="franchise-rating">
-    <div class="rating-label">SERIES RATING</div>
 
-    <div class="rating-content">
-        <span id="overall-score">3/10</span>
-    </div>
-    <div class="rating-tooltip">
-    C:\ASTEROID84\CARTOON_RATING\SCAN>
-
-    WRITING:      <span id="writing-score">2</span>/10
-    VISUALS:      <span id="visual-score">5</span>/10
-    CHARACTERS:   <span id="character-score">2</span>/10
-    MUSIC:        <span id="music-score">4</span>/10
-    NOSTALGIA:    <span id="nostalgia-score">3</span>/10
-
-    OVERALL:      <span id="tooltip-overall">0</span>/10
-</div>
-</div>
    <div class="container">
 
     <header class="page-header">
