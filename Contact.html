@@ -1,1 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartoon Franchises - Asteroid 84 Logo Database</title>
 
+  <style>
+@font-face {
+    font-family: 'IBMDOS';
+
+    src: url('FONTS/IBM_DOS_ISO8.woff2') format('woff2');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #03001e;
+      font-family: 'IBMDOS', monospace;
+      color: #39ff88;;
+      overflow-x: hidden;
+    }
+
+    /* Animated Background Grid */
+    .grid-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      perspective: 500px;
+      z-index: -1;
+      overflow: hidden;
+      background: url("IMAGES/starfield.png") center center / cover no-repeat;
+    }
+
+    .grid {
+      position: absolute;
+      bottom: -250px;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background-image:
+        linear-gradient(to right, #00f0ff 2px, transparent 2px),
+        linear-gradient(to bottom, #00f0ff 2px, transparent 2px);
+      background-size: 60px 60px;
+      transform: rotateX(60deg);
+      animation: gridMove 10s linear infinite;
+    }
+
+    @keyframes gridMove {
+      0% {
+        transform: rotateX(60deg) translateY(0);
+      }
+
+      100% {
+        transform: rotateX(60deg) translateY(60px);
+      }
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+    }
+
+    header img {
+      display: block;
+      margin: 0 auto;
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+    }
+
+    header p {
+      color: #FFFFFF;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      margin-top: 1rem;
+    }
+
+  
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem 2rem;
+      color: #FFFFFF;
+      font-size: 0.75rem;
+      line-height: 1.6;
+      max-width: 1000px;
+      margin: 0 auto;
+      opacity: 0.8;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Animated Grid -->
+  <div class="grid-container">
+    <div class="grid"></div>
+  </div>
+
+  <!-- Header -->
+  <header>
+
+    <img src="Asteroid84 CARTOONS.png" alt="Cartoon Franchises">
+
+    <p>
+      Browse Cartoon Franchise Logo Archives<br>
+ We post new logos every week!
+    </p>
+
+  </header>
+
+
+  <!-- Footer -->
+  <footer>
+
+    The Asteroid 84 Logo Database is a non-commercial archival project dedicated to preserving and documenting the graphic design history of classic cartoons, toys, comics, and related media. All recreated logos and associated properties remain the copyrights and trademarks of their respective artists, creators, studios, publishers, and rights holders. This archive exists solely for historical, educational, and reference purposes.
+
+  </footer>
+
+</body>
+</html>
