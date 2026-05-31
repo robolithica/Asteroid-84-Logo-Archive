@@ -211,6 +211,8 @@ overflow: visible;
         font-size: 0.55rem;
         letter-spacing: 1px;
     }
+  
+   
       .site-logo-container {
     position: fixed;
     top: 20px;
@@ -218,7 +220,6 @@ overflow: visible;
     z-index: 10000;
     padding-bottom: 20px;
 }
-
 .site-logo img {
     width: 55px;
     height: auto;
@@ -232,7 +233,7 @@ overflow: visible;
 }
    .site-logo img:hover {
     transform: scale(1.05);
-    filter: drop-shadow(0 0 8px rgba(255, 0, 127, 0.8));
+    filter: drop-shadow(0 0 8px rgba(57, 255, 136, 0.8));
 }
 
 .site-logo-container:hover .logo-dropdown {
@@ -327,6 +328,33 @@ overflow: visible;
    .footer {
       text-align: center;
            }
+    .rating-tooltip {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 10px;
+
+    width: 260px;
+    padding: 12px;
+
+    background: rgba(0, 0, 0, 0.95);
+    border: 1px solid #39ff88;
+
+    font-size: 0.65rem;
+    line-height: 1.5;
+    white-space: pre-line;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.franchise-rating:hover .rating-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
 </style>
 </head>
 
@@ -354,15 +382,14 @@ overflow: visible;
     </div>
 
 </div>
-<div class="container">
+
+   <div class="container">
 
     <header class="page-header">
         <h1 class="page-title">BraveStarr</h1>
 
        <p class="page-info intro-text">
-            Marshall BraveStarr is a lawman on the planet of New Texas where the valuable mineral Kerium has
-         drawn the worst outlaws in the galaxy. He uses his powers of hawk, wolf, puma, nd bear to keep order
-         and justice.
+            Marshal Bravestarr
            </p>
        <a class="page-info">
             Original Release: Sep 14, 1987
@@ -375,7 +402,7 @@ overflow: visible;
             Studio: Filmation
        </p>
 <p class="page-info">
-        <a class="page-info" href="https://en.wikipedia.org/wiki/BraveStarr" 
+        <a class="page-info" href="https://en.wikipedia.org/wiki/Bravestarr" 
 
 target="_blank">
             BraveStarr - Wiki
@@ -384,8 +411,8 @@ target="_blank">
 
         <a class="page-info" 
 
-href="https://tvtropes.org/pmwiki/pmwiki.php/WesternAnimation/Bravestarr" target="blank">
-            BraveStarr - TVTropes
+href="https://tvtropes.org/pmwiki/pmwiki.php/WesternAnimation/BraveStarr" target="blank">
+            Bravestarr - TVTropes
        </a>
        </p>
     </header>
@@ -400,8 +427,6 @@ href="https://tvtropes.org/pmwiki/pmwiki.php/WesternAnimation/Bravestarr" target
   alt="BraveStarr Cartoon Logo1">
            <div class="caption">Primary Cartoon Logo</div>
         </div>
-       
-
     </section>
 
 </div>
@@ -574,6 +599,28 @@ document.addEventListener("keydown", (e) => {
     }
 });
 
+</script>
+<script>
+   document.addEventListener("DOMContentLoaded", () => {
+
+    const writing = 2;
+    const visuals = 5;
+    const characters = 2;
+    const music = 4;
+    const nostalgia = 3;
+
+    const overall =
+        (writing * 0.35 +
+        visuals * 0.30 +
+        characters * 0.20 +
+        music * 0.15 +
+        nostalgia * 0.10);
+
+    const formatted = overall.toFixed(1);
+
+    document.getElementById("overall-score").textContent = formatted + "/10";
+    document.getElementById("tooltip-overall").textContent = formatted;
+});
 </script>
 <footer class="page footer">
    <div class="page-info" style="margin-top: 40px; font-size: 0.6rem; text-shadow: none; color: #39ff88;">
