@@ -2,58 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cartoon Franchises - Asteroid 84 Logo Database</title>
+  <meta 
+
+name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartoon 
+
+Franchises - Asteroid 84 Logo Database</title>
 
   <style>
 @font-face {
-    font-family: 'IBMDOS';
+    font-family: 
+
+'IBMDOS';
 
     src: url('FONTS/IBM_DOS_ISO8.woff2') format('woff2');
 
-    font-weight: normal;
+    font-weight: 
+
+normal;
     font-style: normal;
 }
 
     body {
       margin: 0;
       padding: 0;
-      background-color: #03001e;
+      background-color: 
+
+#03001e;
       font-family: 'IBMDOS', monospace;
       color: #39ff88;;
-      overflow-x: hidden;
+      overflow-x: 
+
+hidden;
     }
 
     /* Animated Background Grid */
     .grid-container {
       position: fixed;
-      top: 0;
+      top: 
+
+0;
       left: 0;
       width: 100vw;
       height: 100vh;
       perspective: 500px;
       z-index: -1;
-      overflow: hidden;
-      background: url("IMAGES/starfield.png") center center / cover no-repeat;
+      
+
+overflow: hidden;
+      background: url("IMAGES/starfield.png") center center / cover no-
+
+repeat;
     }
 
     .grid {
       position: absolute;
       bottom: -250px;
       left: -50%;
-      width: 200%;
+      width: 
+
+200%;
       height: 200%;
       background-image:
-        linear-gradient(to right, #00f0ff 2px, transparent 2px),
+        linear-gradient(to right, #00f0ff 2px, 
+
+transparent 2px),
         linear-gradient(to bottom, #00f0ff 2px, transparent 2px);
-      background-size: 60px 60px;
+      
+
+background-size: 60px 60px;
       transform: rotateX(60deg);
-      animation: gridMove 10s linear infinite;
+      animation: gridMove 10s 
+
+linear infinite;
     }
 
     @keyframes gridMove {
       0% {
-        transform: rotateX(60deg) translateY(0);
+        transform: rotateX(60deg) 
+
+translateY(0);
       }
 
       100% {
@@ -61,24 +89,32 @@
       }
     }
 
-    /* Header */
+    
+
+/* Header */
     header {
       text-align: center;
       padding: 3rem 1rem 2rem;
     }
 
-    header img {
+    header 
+
+img {
       display: block;
       margin: 0 auto;
       max-width: 300px;
       width: 100%;
-      height: auto;
+      
+
+height: auto;
     }
 
     header p {
       color: #FFFFFF;
       font-size: 1rem;
-      letter-spacing: 2px;
+      letter-spacing: 
+
+2px;
       margin-top: 1rem;
     }
 
@@ -86,23 +122,31 @@
 
     /* Franchise List */
     .franchise-list {
-  max-width: 900px;
+  max-width: 
+
+900px;
   margin: 0 auto;
   padding: 2rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 
+
+1fr);
   gap: 1rem;
   position: relative;
       overflow: hidden;
 }
     .franchise-link::after {
-  content: "";
+  content: 
+
+"";
 
   position: absolute;
   inset: 0;
 
   background: linear-gradient(
-    rgba(255,255,255,0.03) 50%,
+    rgba(255,255,255,0.03) 
+
+50%,
     rgba(0,0,0,0.2) 50%
   );
 
@@ -110,41 +154,57 @@
 
   pointer-events: none;
 
-  border-radius: 12px;
+  
+
+border-radius: 12px;
 }
     
 /* tablet */
 @media (max-width: 900px) {
   .franchise-list {
-    grid-template-columns: repeat(2, 1fr);
+    grid-
+
+template-columns: repeat(2, 1fr);
   }
 }
 
 /* phone */
 @media (max-width: 600px) {
-  .franchise-list {
+  .franchise-
+
+list {
     grid-template-columns: 1fr;
   }
 }
     
     .franchise-link {
       display: block;
-     background-color: #100b21;
+     
+
+background-color: #100b21;
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
       border: 2px solid #00f0ff;
       border-radius: 12px;
-      padding: 1.25rem 1.5rem;
+      
+
+padding: 1.25rem 1.5rem;
       color: #FFFFFF;
       text-decoration: none;
-      font-size: 0.75rem;
+      font-size: 
+
+0.75rem;
       letter-spacing: 1px;
       transition: all 0.3s ease;
       box-shadow:
-        0 0 12px rgba(0, 240, 255, 0.2),
+        0 0 
+
+12px rgba(0, 240, 255, 0.2),
         inset 0 0 10px rgba(0, 240, 255, 0.08);
-      position: relative;
+      position: 
+
+relative;
 overflow: hidden;
     }
    
@@ -152,108 +212,144 @@ overflow: hidden;
   content: "";
 
   position: absolute;
-  inset: 0;
+  
+
+inset: 0;
 
   background: rgba(0,0,0,0.5);
 
   z-index: 0;
 }
     .franchise-link span {
-  position: relative;
+  position: 
+
+relative;
   z-index: 1;
 }
 
     .franchise-link:hover {
       transform: scale(1.05);
-      border-color: #39ff88;
+      border-color: 
+
+#39ff88;
       box-shadow:
         0 0 20px rgba(57, 255, 136, 0.4),
-        inset 0 0 15px rgba(57, 255, 136, 0.15);
+        inset 0 0 15px rgba
+
+(57, 255, 136, 0.15);
     }
           .site-logo-container {
     position: fixed;
     top: 20px;
-    left: 20px;
+    left: 
+
+20px;
     z-index: 10000;
     padding-bottom: 20px;
 }
 
 /* DROPDOWN MENU */
 
-.logo-dropdown {
+.logo-
+
+dropdown {
     position: absolute;
     top: 40px;
     left: 50%;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: 
+
+column;
     gap: 10px;
 
     opacity: 0;
     visibility: hidden;
 
-    transform: translateX(-50%) translateY(-10px);
+    transform: translateX(-50%) 
+
+translateY(-10px);
 
     pointer-events: none;
 
     transition:
         opacity 0.2s ease,
-        transform 0.2s ease,
+        
+
+transform 0.2s ease,
         visibility 0.2s ease;
 }
     
 
 /* SHOW ON HOVER */
 
-.site-logo-container:hover .logo-dropdown {
+.site-logo-
+
+container:hover .logo-dropdown {
     opacity: 1;
     visibility: visible;
 
-    transform: translateX(-50%) translateY(0);
+    transform: translateX
+
+(-50%) translateY(0);
    pointer-events: auto;
 }
 
 .logo-dropdown img {
     width: 80px;
-    height: auto;
+    
+
+height: auto;
     display: block;
 
     transition:
         transform 0.15s ease,
-        filter 0.15s ease;
+        filter 0.15s 
+
+ease;
 }
 
 .logo-dropdown img:hover {
     transform: scale(1.05);
 
     filter:
-        drop-shadow(0 0 8px var(--glow));
+        drop-shadow(0 0 
+
+8px var(--glow));
 }
 
     @media (max-width: 768px) {
         body::before {
-            background-size: 35px 35px;
+            
+
+background-size: 35px 35px;
         }
 
         .container {
             padding-top: 40px;
         }
  
-        .site-logo {
+        
+
+.site-logo {
         top: 20px;
         left: 20px;
     }
    
 @media (max-width: 900px) {
 
-    .gallery-item {
+    .gallery-
+
+item {
         flex: 0 1 calc(33.333% - 12px);
     }
 }
 
 @media (max-width: 600px) {
 
-    .gallery-item {
+    .gallery-item 
+
+{
         flex: 0 1 calc(50% - 12px);
     }
 }    
@@ -263,11 +359,15 @@ overflow: hidden;
     /* Footer */
     footer {
       text-align: center;
-      padding: 3rem 2rem 2rem;
+      
+
+padding: 3rem 2rem 2rem;
       color: #FFFFFF;
       font-size: 0.75rem;
       line-height: 1.6;
-      max-width: 1000px;
+ 
+
+     max-width: 1000px;
       margin: 0 auto;
       opacity: 0.8;
     }
@@ -278,19 +378,27 @@ overflow: hidden;
 
 <body>
 
-  <!-- Animated Grid -->
+  
+
+<!-- Animated Grid -->
   <div class="grid-container">
     <div class="grid"></div>
   </div>
 
-  <!-- Header -->
+  
+
+<!-- Header -->
   <header>
 
-    <img src="Asteroid84 CARTOONS.png" alt="Cartoon Franchises">
+    <img src="Asteroid84 CARTOONS.png" alt="Cartoon 
+
+Franchises">
 
     <p>
       Browse Cartoon Franchise Logo Archives<br>
- We post new logos every week!
+ We post new logos 
+
+every week!
     </p>
 
   </header>
@@ -299,79 +407,181 @@ overflow: hidden;
   <div class="franchise-list">
     
 
-      <a class="franchise-link" href="PAGES/Beverly Hills Teens.html" style="background-image: url('IMAGES/BHT-FrLink.JPG');">
+      
+
+<a class="franchise-link" href="PAGES/Beverly Hills Teens.html" style="background-
+
+image: url('IMAGES/BHT-FrLink.webp');">
       <span>Beverly Hills Teens</span>
     </a>
-    <a class="franchise-link" href="PAGES/Bionic6.html" style="background-image: url('IMAGES/BO6-FrLink.png');">
+    
+
+<a class="franchise-link" href="PAGES/Bionic6.html" style="background-image: url
+
+('IMAGES/BO6-FrLink.webp');">
       <span>Bionic 6</span>
     </a>
-      <a class="franchise-link" href="PAGES/BraveStarr.html" style="background-image: url('IMAGES/BST-FrLink.jpg');">
+      <a 
+
+class="franchise-link" href="PAGES/BraveStarr.html" style="background-image: url
+
+('IMAGES/BST-FrLink.webp');">
       <span>BraveStarr</span>
     </a>
-      <a class="franchise-link" href="PAGES/Centurions.html" style="background-image: url('IMAGES/CNT-FrLink.jpg');">
+      <a 
+
+class="franchise-link" href="PAGES/Centurions.html" style="background-image: url
+
+('IMAGES/CNT-FrLink.webp');">
       <span>Centurions</span>
     </a>
-          <a class="franchise-link" href="PAGES/Denver the Last Dinosaur.html" style="background-image: url('IMAGES/DLD-FrLink.png');">
+          <a 
+
+class="franchise-link" href="PAGES/Denver the Last Dinosaur.html" style="background-
+
+image: url('IMAGES/DLD-FrLink.webp');">
       <span>Denver the Last Dinosaur</span>
-    </a>
-      <a class="franchise-link" href="PAGES/DinoRiders.html" style="background-image: url('IMAGES/DNR-FrLink.png');">
+    
+
+</a>
+      <a class="franchise-link" href="PAGES/DinoRiders.html" style="background-
+
+image: url('IMAGES/DNR-FrLink.webp');">
       <span>Dino-Riders</span>
     </a>    
-      <a class="franchise-link" href="PAGES/Dinosaucers.html" style="background-image: url('IMAGES/DNS-FrLink.png');">
+      
+
+<a class="franchise-link" href="PAGES/Dinosaucers.html" style="background-image: url
+
+('IMAGES/DNS-FrLink.webp');">
       <span>Dinosaucers</span>
-          <a class="franchise-link" href="PAGES/GIJoe.html" style="background-image: url('IMAGES/GIJ-FrLink.png');">
+          <a 
+
+class="franchise-link" href="PAGES/GIJoe.html" style="background-image: url
+
+('IMAGES/GIJ-FrLink.webp');">
       <span>G.I.Joe: A Real American Hero</span>
     </a>
-      <a class="franchise-link" href="PAGES/Heathcliff.html" style="background-image: url('IMAGES/HCC-FrLink.png');">
+   
+
+   <a class="franchise-link" href="PAGES/Heathcliff.html" style="background-image: url
+
+('IMAGES/HCC-FrLink.webp');">
       <span>Heathcliff & The Catillac Cats</span>
-    </a>    
-      <a class="franchise-link" href="PAGES/MOTU.html" style="background-image: url('IMAGES/MOU-FrLink.png');">
+    </a>  
+
+  
+      <a class="franchise-link" href="PAGES/MOTU.html" style="background-image: url
+
+('IMAGES/MOU-FrLink.webp');">
       <span>Masters of the Universe</span>
     </a>
-      <a class="franchise-link" href="PAGES/InspectorGadget.html" style="background-image: url('IMAGES/IPG-FrLink.jpg');">
+      <a 
+
+class="franchise-link" href="PAGES/InspectorGadget.html" style="background-image: 
+
+url('IMAGES/IPG-FrLink.webp');">
       <span>Inspector Gadget</span>
     </a> 
-      <a class="franchise-link" href="PAGES/Jem.html" style="background-image: url('IMAGES/JEM-FrLink.png');">
+      <a 
+
+class="franchise-link" href="PAGES/Jem.html" style="background-image: url
+
+('IMAGES/JEM-FrLink.webp');">
       <span>Jem</span>
     </a>    
-      <a class="franchise-link" href="PAGES/My Little Pony N' Friends.html" style="background-image: url('IMAGES/MLP-FrLink.png');">
+      <a 
+
+class="franchise-link" href="PAGES/My Little Pony N' Friends.html" style="background-
+
+image: url('IMAGES/MLP-FrLink.webp');">
       <span>My Little Pony N' Friends</span>
-    </a>    
-      <a class="franchise-link" href="PAGES/PolePosition.html" style="background-image: url('IMAGES/PPS-FrLink.png');">
+    
+
+</a>    
+      <a class="franchise-link" href="PAGES/PolePosition.html" style="background-
+
+image: url('IMAGES/PPS-FrLink.webp');">
       <span>Pole Position</span>
     </a>    
-      <a class="franchise-link" href="PAGES/Rainbow Brite.html" style="background-image: url('IMAGES/RBB-FrLink.png');">
+      
+
+<a class="franchise-link" href="PAGES/Rainbow Brite.html" style="background-image: 
+
+url('IMAGES/RBB-FrLink.webp');">
       <span>Rainbow Brite</span>
     </a>    
-      <a class="franchise-link" href="PAGES/Sectaurs.html" style="background-image: url('IMAGES/SWS-FrLink.png');">
+      <a 
+
+class="franchise-link" href="PAGES/Sectaurs.html" style="background-image: url
+
+('IMAGES/SWS-FrLink.webp');">
       <span>Sectaurs: Warriors of Symbion</span>
-    </a>    
-      <a class="franchise-link" href="PAGES/SheRa.html" style="background-image: url('IMAGES/SHE-FrLink.png');">
+    
+
+</a>    
+      <a class="franchise-link" href="PAGES/SheRa.html" style="background-
+
+image: url('IMAGES/SHE-FrLink.webp');">
       <span>She-Ra: Princess of Power</span>
+  
+
+  </a>    
+      <a class="franchise-link" href="PAGES/SilverHawks.html" 
+
+style="background-image: url('IMAGES/SVH-FrLink.webp');">
+      
+
+<span>SilverHawks</span>
     </a>    
-      <a class="franchise-link" href="PAGES/SilverHawks.html" style="background-image: url('IMAGES/SVH-FrLink.png');">
-      <span>SilverHawks</span>
-    </a>    
-    <a class="franchise-link" href="PAGES/SpiderManAmazingFriends.html"
-      style="background-image: url('IMAGES/SAF-FrLink.JPG');">
+    <a class="franchise-link" 
+
+href="PAGES/SpiderManAmazingFriends.html"
+      style="background-image: url
+
+('IMAGES/SAF-FrLink.webp');">
       <span>Spider-Man and his Amazing Friends</span>
-    </a>
-      <a class="franchise-link" href="PAGES/ThunderCats.html" style="background-image: url('IMAGES/TDC-FrLink.png');">
+  
+
+  </a>
+      <a class="franchise-link" href="PAGES/ThunderCats.html" style="background-
+
+image: url('IMAGES/TDC-FrLink.webp');">
       <span>ThunderCats</span>
     </a>
-      <a class="franchise-link" href="PAGES/transformers.html" style="background-image: url('IMAGES/TFM-FrLink.png');">
+      <a 
+
+class="franchise-link" href="PAGES/transformers.html" style="background-image: url
+
+('IMAGES/TFM-FrLink.webp');">
       <span>Transformers</span>
     </a>    
-    <a class="franchise-link" href="PAGES/ulysses31.html" style="background-image: url('IMAGES/U31-FrLink.JPG');">
+    <a 
+
+class="franchise-link" href="PAGES/ulysses31.html" style="background-image: url
+
+('IMAGES/U31-FrLink.webp');">
       <span>Ulysses 31</span>
     </a>
     
   </div>
 
-  <!-- Footer -->
+  <!-- 
+
+Footer -->
   <footer>
 
-    The Asteroid 84 Logo Database is a non-commercial archival project dedicated to preserving and documenting the graphic design history of classic cartoons, toys, comics, and related media. All recreated logos and associated properties remain the copyrights and trademarks of their respective artists, creators, studios, publishers, and rights holders. This archive exists solely for historical, educational, and reference purposes.
+    The Asteroid 84 Logo Database is a non-commercial archival 
+
+project dedicated to preserving and documenting the graphic design history of classic 
+
+cartoons, toys, comics, and related media. All recreated logos and associated properties 
+
+remain the copyrights and trademarks of their respective artists, creators, studios, 
+
+publishers, and rights holders. This archive exists solely for historical, educational, and 
+
+reference purposes.
 
   </footer>
 
