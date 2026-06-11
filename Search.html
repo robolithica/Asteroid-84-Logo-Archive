@@ -139,8 +139,9 @@ searchInput.addEventListener('input', function() {
     }
 
     const matches = pages.filter(page =>
-        page.title.toLowerCase().includes(query)
-    );
+    page.title.toLowerCase().includes(query) ||
+    page.keywords.toLowerCase().includes(query)
+);
 
     if (matches.length === 0) {
         resultsDiv.innerHTML = '<p class="no-results">NO MATCHES FOUND.</p>';
