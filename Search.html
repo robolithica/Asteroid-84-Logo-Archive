@@ -125,23 +125,30 @@ footer {
 
 <script src="search-data.js"></script>
 
+<script src="search-data.js"></script>
+
 <script>
+window.addEventListener('DOMContentLoaded', () => {
+
 const searchInput = document.getElementById('searchInput');
 const resultsDiv = document.getElementById('results');
+
+if (!searchInput || !resultsDiv || typeof pages === "undefined") {
+    console.log("Search setup failed: missing elements or data");
+    return;
+}
 
 searchInput.addEventListener('input', function() {
     const query = this.value.toLowerCase().trim();
 
     resultsDiv.innerHTML = '';
 
-    if (query === '') {
-        return;
-    }
+    if (query === '') return;
 
     const matches = pages.filter(page =>
-    page.title.toLowerCase().includes(query) ||
-    page.keywords.toLowerCase().includes(query)
-);
+        page.title.toLowerCase().includes(query) ||
+        (page.keywords && page.keywords.toLowerCase().includes(query))
+    );
 
     if (matches.length === 0) {
         resultsDiv.innerHTML = '<p class="no-results">NO MATCHES FOUND.</p>';
@@ -153,9 +160,10 @@ searchInput.addEventListener('input', function() {
         link.href = page.url;
         link.className = 'result-item';
         link.textContent = page.title;
-
         resultsDiv.appendChild(link);
     });
+});
+
 });
 </script>
 
