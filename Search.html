@@ -93,6 +93,37 @@ header p {
     margin-top: 1rem;
 }
 
+.results-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.results-list li {
+    margin-bottom: 10px;
+    border: 2px solid #39ff88;
+    border-radius: 6px;
+    background: rgba(3, 0, 30, 0.8);
+    transition: all 0.3s ease;
+}
+
+.results-list li a {
+    display: block;
+    padding: 12px;
+    color: #39ff88;
+    text-decoration: none;
+    font-family: 'IBMDOS', monospace;
+}
+
+.results-list li:hover {
+    border-color: #00f0ff;
+    box-shadow: 0 0 15px rgba(0,240,255,0.6);
+}
+
+.results-list li a:hover {
+    color: #00f0ff;
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -155,13 +186,21 @@ searchInput.addEventListener('input', function() {
         return;
     }
 
-    matches.forEach(page => {
-        const link = document.createElement('a');
-        link.href = page.url;
-        link.className = 'result-item';
-        link.textContent = page.title;
-        resultsDiv.appendChild(link);
-    });
+    const ul = document.createElement('ul');
+ul.className = 'results-list';
+
+matches.forEach(page => {
+    const li = document.createElement('li');
+
+    const link = document.createElement('a');
+    link.href = page.url;
+    link.textContent = page.title;
+
+    li.appendChild(link);
+    ul.appendChild(li);
+});
+
+resultsDiv.appendChild(ul);
 });
 
 });
