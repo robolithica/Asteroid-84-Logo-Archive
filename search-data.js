@@ -8,3 +8,4 @@ const pages = [
     { title: "SilverHawks", url: "silverhawks.html" },
     { title: "M.A.S.K.", url: "mask.html" }
 ];
+alert("search-data loaded");
