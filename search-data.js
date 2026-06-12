@@ -1,10 +1,8 @@
 const pages = [
-    { title: "He-Man and the Masters of the Universe", url: "MOTU.html",
-    keywords: "Heman motu masters eternia 1983 1984 1985 skeletor filmation marvel mattel"
-},
+    { title: "He-Man and the Masters of the Universe", url: "PAGES/MOTU.html",
+    keywords: "Heman motu masters eternia 1983 1984 1985 skeletor filmation marvel mattel"},
     { title: "G.I. Joe", url: "PAGES/GIJoe.html", keywords: "GIJoe yo joe duke scarlett snake cobra hasbro 1982 1983 1984 1985 1986 1987 1988 1989 Sunbow Marvel" },
     { title: "ThunderCats", url: "PAGES/ThunderCats.html", keywords: "thunder cats thundercats mumm-ra lion-o tigra cheetara thundera panthro 1985 1986 1987 1988 1989 rankin bass ljn star"},
-    { title: "Voltron", url: "PAGES/voltron.html" },
     { title: "Beverly Hills Teens", url: "PAGES/Beverly Hills Teens.html" },
     { title: "Bionic Six", url: "PAGES/Bionic6.html" },
     { title: "Blackstar", url: "PAGES/Blackstar.html" },
@@ -26,6 +24,7 @@ const pages = [
     { title: "Rainbow Brite", url: "PAGES/Rainbow Brite.html" },
     { title: "Sectaurs: Warriors of Symbion", url: "PAGES/Sectaurs.html" },
     { title: "SilverHawks", url: "PAGES/SilverHawks.html" },
-    { title: "M.A.S.K.", url: "PAGES/mask.html" }
+    { title: "M.A.S.K.", url: "PAGES/mask.html" },
+  { title: "Voltron", url: "PAGES/voltron.html" }
 ];
 
