@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta 
 
-name="viewport" content="width=device-width, initial-scale=1.0">
+name="viewport" content="width=device-width, initial-
+
+scale=1.0">
   <title>Cartoon 
 
 Franchises - Asteroid 84 Logo Database</title>
@@ -15,7 +17,9 @@ Franchises - Asteroid 84 Logo Database</title>
 
 'IBMDOS';
 
-    src: url('FONTS/IBM_DOS_ISO8.woff2') format('woff2');
+    src: url
+
+('FONTS/IBM_DOS_ISO8.woff2') format('woff2');
 
     font-weight: 
 
@@ -26,7 +30,9 @@ normal;
     body {
       margin: 0;
       padding: 0;
-      background-color: 
+      
+
+background-color: 
 
 #03001e;
       font-family: 'IBMDOS', monospace;
@@ -36,7 +42,9 @@ normal;
 hidden;
     }
 
-    /* Animated Background Grid */
+    /* Animated Background 
+
+Grid */
     .grid-container {
       position: fixed;
       top: 
@@ -47,7 +55,9 @@ hidden;
       height: 100vh;
       perspective: 500px;
       z-index: -1;
-      
+     
+
+ 
 
 overflow: hidden;
       background: url("IMAGES/starfield.png") center center / cover no-
@@ -57,7 +67,9 @@ repeat;
 
     .grid {
       position: absolute;
-      bottom: -250px;
+      bottom: 
+
+-250px;
       left: -50%;
       width: 
 
@@ -67,12 +79,16 @@ repeat;
         linear-gradient(to right, #00f0ff 2px, 
 
 transparent 2px),
-        linear-gradient(to bottom, #00f0ff 2px, transparent 2px);
+     
+
+   linear-gradient(to bottom, #00f0ff 2px, transparent 2px);
       
 
 background-size: 60px 60px;
       transform: rotateX(60deg);
-      animation: gridMove 10s 
+      animation: 
+
+gridMove 10s 
 
 linear infinite;
     }
@@ -85,7 +101,9 @@ translateY(0);
       }
 
       100% {
-        transform: rotateX(60deg) translateY(60px);
+        
+
+transform: rotateX(60deg) translateY(60px);
       }
     }
 
@@ -97,7 +115,9 @@ translateY(0);
       padding: 3rem 1rem 2rem;
     }
 
-    header 
+    
+
+header 
 
 img {
       display: block;
@@ -110,7 +130,9 @@ height: auto;
     }
 
     header p {
-      color: #FFFFFF;
+      color: 
+
+#FFFFFF;
       font-size: 1rem;
       letter-spacing: 
 
@@ -125,7 +147,9 @@ height: auto;
   max-width: 
 
 900px;
-  margin: 0 auto;
+  
+
+margin: 0 auto;
   padding: 2rem;
   display: grid;
   grid-template-columns: repeat(3, 
@@ -135,7 +159,9 @@ height: auto;
   position: relative;
       overflow: hidden;
 }
-    .franchise-link::after {
+    
+
+.franchise-link::after {
   content: 
 
 "";
@@ -147,7 +173,9 @@ height: auto;
     rgba(255,255,255,0.03) 
 
 80%,
-    rgba(0,0,0,0.2) 50%
+    rgba
+
+(0,0,0,0.2) 50%
   );
 
   background-size: 100% 4px;
@@ -161,7 +189,9 @@ border-radius: 12px;
     
 /* tablet */
 @media (max-width: 900px) {
-  .franchise-list {
+  
+
+.franchise-list {
     grid-
 
 template-columns: repeat(2, 1fr);
@@ -173,7 +203,9 @@ template-columns: repeat(2, 1fr);
   .franchise-
 
 list {
-    grid-template-columns: 1fr;
+    grid-template-columns: 
+
+1fr;
   }
 }
     
@@ -190,17 +222,22 @@ background-repeat: no-repeat;
       
 
 padding: 1.25rem 1.5rem;
-      color: #FFFFFF;
-      text-decoration: none;
+      color: #ffffff;
+      text-
+
+decoration: none;
       font-size: 
 
 0.75rem;
       letter-spacing: 1px;
-      transition: all 0.3s ease;
+  
+  transition: all 0.3s ease;
       box-shadow:
         0 0 
 
-12px rgba(0, 240, 255, 0.2),
+12px rgba(0, 240, 255, 
+
+0.2),
         inset 0 0 10px rgba(0, 240, 255, 0.08);
       position: 
 
@@ -211,7 +248,9 @@ overflow: hidden;
     .franchise-link::before {
   content: "";
 
-  position: absolute;
+  position: 
+
+absolute;
   
 
 inset: 0;
@@ -224,17 +263,28 @@ inset: 0;
   position: 
 
 relative;
-  z-index: 1;
-}
+  z-index: 1;  text-shadow:
+  -2px -2px 
 
-    .franchise-link:hover {
+0 #000,
+   2px -2px 0 #000,
+  -2px  2px 0 #000,
+   2px  2px 0 #000,
+   0 0 4px rgba(0,0,0,1),
+   0 0 8px rgba(0,0,0,1);}
+
+    
+
+.franchise-link:hover {
       transform: scale(1.05);
       border-color: 
 
 #39ff88;
       box-shadow:
         0 0 20px rgba(57, 255, 136, 0.4),
-        inset 0 0 15px rgba
+        inset 0 
+
+0 15px rgba
 
 (57, 255, 136, 0.15);
     }
@@ -245,7 +295,9 @@ relative;
 
 20px;
     z-index: 10000;
-    padding-bottom: 20px;
+    padding-
+
+bottom: 20px;
 }
 
 /* DROPDOWN MENU */
@@ -273,7 +325,9 @@ translateY(-10px);
     pointer-events: none;
 
     transition:
-        opacity 0.2s ease,
+    
+
+    opacity 0.2s ease,
         
 
 transform 0.2s ease,
@@ -285,7 +339,9 @@ transform 0.2s ease,
 
 .site-logo-
 
-container:hover .logo-dropdown {
+container:hover .logo-dropdown 
+
+{
     opacity: 1;
     visibility: visible;
 
@@ -310,7 +366,9 @@ ease;
 }
 
 .logo-dropdown img:hover {
-    transform: scale(1.05);
+    transform: scale
+
+(1.05);
 
     filter:
         drop-shadow(0 0 
@@ -322,7 +380,9 @@ ease;
         body::before {
             
 
-background-size: 35px 35px;
+background-size: 35px 
+
+35px;
         }
 
         .container {
@@ -336,7 +396,9 @@ background-size: 35px 35px;
         left: 20px;
     }
    
-@media (max-width: 900px) {
+@media (max-width: 
+
+900px) {
 
     .gallery-
 
@@ -350,7 +412,9 @@ item {
     .gallery-item 
 
 {
-        flex: 0 1 calc(50% - 12px);
+        flex: 0 1 calc(50% - 
+
+12px);
     }
 }    
     
@@ -364,7 +428,9 @@ item {
 padding: 3rem 2rem 2rem;
       color: #FFFFFF;
       font-size: 0.75rem;
-      line-height: 1.6;
+      
+
+line-height: 1.6;
  
 
      max-width: 1000px;
@@ -381,7 +447,9 @@ padding: 3rem 2rem 2rem;
   
 
 <!-- Animated Grid -->
-  <div class="grid-container">
+  <div 
+
+class="grid-container">
     <div class="grid"></div>
   </div>
 
@@ -403,180 +471,810 @@ every week!
 
   </header>
 
-  <!-- Franchise Links -->
+  <!-- Franchise 
+
+Links -->
   <p align="center">A</p>
-  <div class="franchise-list">
-<a class="franchise-link" href="PAGES/ATeam.html" style="background-image: url('IMAGES/TAT-FrLink.webp');">
-      <span>The A Team</span>
-    </a>
-   </div> 
+  
+<div class="franchise-list">
+
+
+<a class="franchise-link" href="PAGES/Alf.html" style="background-image: url('IMAGES/ALF-FrLink.webp');">
+      <span>Alf: The Animated 
+
+Series</span>
+ </a>
+   
+
+<a class="franchise-link" href="PAGES/Alvin & Chipmunks.html" style="background-image: url('IMAGES/ACM-FrLink.webp');">
+      
+
+<span>Alvin and the Chipmunks</span>
+ </a>
+  
+
+</div> 
   <p align="center">B</p>
   <div class="franchise-list">
     
+
+<a class="franchise-link" href="PAGES/Beetlejuice.html" style="background-image: url('IMAGES/BTJ-FrLink.webp');">
+      
+
+<span>Beetlejuice</span>
+    </a>
+ 
+
 <a class="franchise-link" href="PAGES/Beverly Hills Teens.html" style="background-image: url('IMAGES/BHT-FrLink.webp');">
-      <span>Beverly Hills Teens</span>
+      
+
+<span>Beverly Hills Teens</span>
     </a>
     
 
+
+<a class="franchise-link" href="PAGES/BigFoot Muscle Machines.html" style="background-image: url('IMAGES/BMM-FrLink.webp');">
+      
+
+<span>BigFoot and the Muscle Machines</span>
+    </a>
+ 
+
+
 <a class="franchise-link" href="PAGES/Bionic6.html" style="background-image: url('IMAGES/BO6-FrLink.webp');">
-      <span>Bionic 6</span>
+      <span>Bionic 
+
+6</span>
     </a>
    
     <a class="franchise-link" href="PAGES/Blackstar.html" style="background-image: url('IMAGES/BKS-FrLink.webp');">
-      <span>Blackstar</span>
+    
+
+  <span>Blackstar</span>
     </a>
-      <a class="franchise-link" href="PAGES/BraveStarr.html" style="background-image: url('IMAGES/BST-FrLink.webp');">
+      <a class="franchise-link" href="PAGES/BraveStarr.html" style="background-image: url('IMAGES/BST-
+
+FrLink.webp');">
       <span>BraveStarr</span>
     </a>
   </div>
-  <p align="center">C</p>
-  <div class="franchise-list">
-      <a class="franchise-link" href="PAGES/Centurions.html" style="background-image: url('IMAGES/CNT-FrLink.webp');">
-      <span>Centurions</span>
-    </a>
-    </div>
-  <p align="center">D</p>
-  <div class="franchise-list">
-    <a class="franchise-link" href="PAGES/DefendersoftheEarth.html" style="background-image: url('IMAGES/DOE-FrLink.webp');">
-      <span>Defenders Of The Earth</span></a>
-    
-          <a class="franchise-link" href="PAGES/Denver the Last Dinosaur.html" style="background-image: url('IMAGES/DLD-FrLink.webp');">
-      <span>Denver the Last Dinosaur</span></a>
-      
-    <a class="franchise-link" href="PAGES/DinoRiders.html" style="background-image: url('IMAGES/DNR-FrLink.webp');">
-      <span>Dino-Riders</span>
-    </a>    
-      
+  
 
-<a class="franchise-link" href="PAGES/Dinosaucers.html" style="background-image: url('IMAGES/DNS-FrLink.webp');">
-      <span>Dinosaucers</span> </a>
-    
-    <a class="franchise-link" href="PAGES/DuckTales.html" style="background-image: url('IMAGES/DKT-FrLink.webp');">
-      <span>DuckTales</span> </a>
-    
-    <a class="franchise-link" href="PAGES/Dungeons&Dragons.html" style="background-image: url('IMAGES/DAD-FrLink.webp');">
-      <span>Dungeons & Dragons</span> </a>
-    </div>
-  
-  <p align="center">F</p>
+
+<p align="center">C</p>
   <div class="franchise-list">
-    <a class="franchise-link" href="PAGES/FilmationsGhostbusters.html" style="background-image: url('IMAGES/FGB-FrLink.webp');">
-      <span>Filmation's Ghostbusters</span></a>
-  </div>
-  
-    <p align="center">G</p>
-  <div class="franchise-list">
-         
-    <a class="franchise-link" href="PAGES/GIJoe.html" style="background-image: url('IMAGES/GIJ-FrLink.webp');">
-      <span>G.I.Joe: A Real American Hero</span>
+    
+
+<a class="franchise-link" href="PAGES/Care Bears.html" style="background-image: url('IMAGES/TCB-FrLink.webp');">
+  <span>The Care 
+
+Bears</span>
     </a>
-    <a class="franchise-link" href="PAGES/Gobots.html" style="background-image: url('IMAGES/GBT-FrLink.webp');">
-      <span>Gobots</span>
+
+
+<a class="franchise-link" href="PAGES/Care Bears Family.html" style="background-image: url('IMAGES/CBF-FrLink.webp');">
+  <span>The 
+
+Care Bears Family</span>
+    </a>
+
+
+<a class="franchise-link" href="PAGES/Centurions.html" style="background-image: url('IMAGES/CNT-FrLink.webp');">
+  
+
+<span>Centurions</span>
+    </a>
+
+ 
+<a class="franchise-link" href="PAGES/Challenge Gobots.html" style="background-image: url('IMAGES/CGB-FrLink.webp');">
+  
+
+<span>Challenge of the Gobots</span>
     </a>
    
-</div>
-  <p align="center">H</p>
+
+<a class="franchise-link" href="PAGES/Charlie Brown & Snoopy Show.html" style="background-image: url('IMAGES/CBS-FrLink.webp');">
+  
+
+<span>The Charlie Brown & Snoopy Show</span>
+    </a>
+ 
+<a class="franchise-link" href="PAGES/Chuck Norris KK.html" style="background-image: url('IMAGES/CKK-FrLink.webp');">
+  <span>Chuck 
+
+Norris Karate Kommandos</span>
+    </a>
+ 
+<a class="franchise-link" href="PAGES/COPS.html" style="background-image: url('IMAGES/COP-FrLink.webp');">
+  <span>C.O.P.S.</span>
+ 
+
+   </a>
+ </div>
+   
+
+  
+
+
+
+<p align="center">D</p>
   <div class="franchise-list">
-   <a class="franchise-link" href="PAGES/Heathcliff.html" style="background-image: url('IMAGES/HCC-FrLink.webp');">
+  
+<a class="franchise-link" href="PAGES/Danger Mouse.html" style="background-image: url('IMAGES/DGM-FrLink.webp');">
+      
+
+<span>Danger Mouse</span></a>  
+<a class="franchise-link" href="PAGES/DefendersoftheEarth.html" style="background-image: url('IMAGES/DOE-FrLink.webp');">
+      
+
+<span>Defenders Of The Earth</span></a>
+
+<a class="franchise-link" href="PAGES/Dennis The Menace.html" style="background-image: url('IMAGES/DTM-FrLink.webp');">
+      
+
+<span>Dennis The Menace</span></a> 
+          
+
+<a class="franchise-link" href="PAGES/Denver the Last Dinosaur.html" style="background-image: url('IMAGES/DLD-FrLink.webp');">
+      
+
+<span>Denver the Last Dinosaur</span></a>
+      
+    
+<a class="franchise-link" href="PAGES/Dink Dinosaur.html" style="background-image: url('IMAGES/DID-FrLink.webp');">
+      <span>Dink 
+
+The Little Dinosaur</span></a>
+<a class="franchise-link" href="PAGES/DinoRiders.html" style="background-image: url('IMAGES/DNR-FrLink.webp');">
+      <span>Dino-
+
+Riders</span>
+    </a>    
+      
+
+<a class="franchise-link" href="PAGES/Dinosaucers.html" style="background-image: url('IMAGES/DNS-
+
+FrLink.webp');">
+      <span>Dinosaucers</span> </a>
+ 
+<a class="franchise-link" href="PAGES/Disney Chip & Dale.html" style="background-image: url('IMAGES/DCD-FrLink.webp');">
+      
+
+<span>Disney's Chip & Dale's Rescue Rangers</span></a>   
+    
+<a class="franchise-link" href="PAGES/Disney Gummi Bears.html" style="background-image: url('IMAGES/DGB-FrLink.webp');">
+      
+
+<span>Disney's Adventures of the Gummi Bears</span></a>
+<a class="franchise-link" href="PAGES/DuckTales.html" style="background-image: url('IMAGES/DKT-FrLink.webp');">
+      
+
+<span>DuckTales</span> </a>
+    
+    <a class="franchise-link" href="PAGES/Dungeons&Dragons.html" style="background-image: url
+
+('IMAGES/DAD-FrLink.webp');">
+      <span>Dungeons & Dragons</span> </a>
+    
+<a class="franchise-link" href="PAGES/The Dukes.html" style="background-image: url('IMAGES/TDU-FrLink.webp');">
+      <span>The 
+
+Dukes</span></a>
+</div>
+  
+  
+
+
+<p align="center">F</p>
+  <div class="franchise-list">
+    
+<a class="franchise-link" href="PAGES/Fat Albert.html" style="background-image: url('IMAGES/FAC-FrLink.webp');">
+      <span>Fat Albert 
+
+& The Cosby Kids</span></a>
+<a class="franchise-link" href="PAGES/FilmationsGhostbusters.html" style="background-image: url('IMAGES/FGB-FrLink.webp');">
+      
+
+<span>Filmation's Ghostbusters</span></a>
+  
+<a class="franchise-link" href="PAGES/Flintstone Kids.html" style="background-image: url('IMAGES/FSK-FrLink.webp');">
+      
+
+<span>Flintstone Kids</span></a>
+<a class="franchise-link" href="PAGES/Fonz & Happy Days Gang.html" style="background-image: url('IMAGES/FHD-FrLink.webp');">
+      
+
+<span>The Fonz & The Happy Days Gang</span></a>
+<a class="franchise-link" href="PAGES/Fraggle Rock Animated.html" style="background-image: url('IMAGES/FRA-FrLink.webp');">
+      
+
+<span>Fraggle Rock: The Animated Series</span></a>
+</div>
+  
+    
+
+
+<p align="center">G</p>
+  <div class="franchise-list">
+         
+    
+
+<a class="franchise-link" href="PAGES/GIJoe.html" style="background-image: url('IMAGES/GIJ-FrLink.webp');">
+      <span>G.I.Joe: A Real 
+
+American Hero</span>
+    </a>
+    <a class="franchise-link" href="PAGES/GForce.html" style="background-image: url('IMAGES/GFC-
+
+FrLink.webp');">
+      <span>G-Force</span>
+    </a>
+
+<a class="franchise-link" href="PAGES/Galtar.html" style="background-image: url('IMAGES/GGL-FrLink.webp');">
+      <span>Galtar & The 
+
+Golden Lance</span>
+    </a>
+    
+
+<a class="franchise-link" href="PAGES/GarbagePailKids.html" style="background-image: url('IMAGES/GPC-FrLink.webp');">
+      
+
+<span>Garbage Pail Kids</span>
+    </a>
+ 
+<a class="franchise-link" href="PAGES/Garfield & Friends.html" style="background-image: url('IMAGES/GAF-FrLink.webp');">
+      
+
+<span>Garfield & Friends</span>
+    </a>
+ 
+<a class="franchise-link" href="PAGES/GetALong Gang.html" style="background-image: url('IMAGES/GAG-FrLink.webp');">
+      <span>The 
+
+Get-A-Long Gang</span>
+    </a>
+ 
+<a class="franchise-link" href="PAGES/Goldie Gold.html" style="background-image: url('IMAGES/GGA-FrLink.webp');">
+      <span>Goldie 
+
+Gold & Action Jack</span>
+    </a>
+
+</div>
+  
+
+
+<p align="center">H</p>
+  <div class="franchise-list">
+   <a class="franchise-link" href="PAGES/Heathcliff.html" style="background-image: 
+
+url('IMAGES/HCC-FrLink.webp');">
       <span>Heathcliff & The Catillac Cats</span>
     </a>  
-    <a class="franchise-link" href="PAGES/HulkHoganRNW.html" style="background-image: url('IMAGES/HHW-FrLink.webp');">
-      <span>Hulk Hogan's Rock N' Wrestling</span>
+   
+<a class="franchise-link" href="PAGES/Herculoids.html" style="background-image: url('IMAGES/HCL-FrLink.webp');">
+      
+
+<span>Herculoids</span>
+    </a>
+ <a class="franchise-link" href="PAGES/HulkHoganRNW.html" style="background-image: url('IMAGES/HHW-FrLink.webp');">
+      
+
+<span>Hulk Hogan's Rock N' Wrestling</span>
+    </a> 
+
+ 
+</div>
+  
+
+
+<p align="center">I</p>
+  <div class="franchise-list">
+  
+<a class="franchise-link" href="PAGES/Incredible Hulk.html" style="background-image: url('IMAGES/ICH-FrLink.webp');">
+      <span>The 
+
+Incredible Hulk</span>
+    </a>
+<a class="franchise-link" href="PAGES/Inhumanoids.html" style="background-image: url('IMAGES/IHN-FrLink.webp');">
+      
+
+<span>Inhumanoids</span>
+    </a>   
+    
+<a class="franchise-link" href="PAGES/InspectorGadget.html" style="background-image: url('IMAGES/IPG-FrLink.webp');">
+      
+
+<span>Inspector Gadget</span>
+    </a>
+  
+   
+
+</div>
+  
+
+
+<p align="center">J</p>
+  <div class="franchise-list">   
+    
+<a class="franchise-link" href="PAGES/Jem.html" style="background-image: url('IMAGES/JEM-FrLink.webp');">
+      <span>Jem</span>
+    
+
+</a> 
+<a class="franchise-link" href="PAGES/Jayce Wheeled Warriors.html" style="background-image: url('IMAGES/JWW-FrLink.webp');">
+      
+
+<span>Jayce & The Wheeled Warriors</span>
+    </a>   
+   
+</div>
+  
+
+<p align="center">K</p>
+  <div class="franchise-list">   
+    
+<a class="franchise-link" href="PAGES/Karate Kid.html" style="background-image: url('IMAGES/KRK-FrLink.webp');">
+      <span>The 
+
+Karate Kid</span>
+    </a>    
+   
+</div>
+
+
+<p align="center">L</p>
+  <div class="franchise-list">   
+    
+<a class="franchise-link" href="PAGES/Lady Lovely Locks.html" style="background-image: url('IMAGES/LLL-FrLink.webp');">
+      
+
+<span>Lady Lovely Locks & The Pixietails</span>
+    </a>  
+<a class="franchise-link" href="PAGES/Laverne & Shirley.html" style="background-image: url('IMAGES/LAS-FrLink.webp');">
+      
+
+<span>Laverne & Shirley</span>
+    </a>  
+<a class="franchise-link" href="PAGES/LazerTag Academy.html" style="background-image: url('IMAGES/LTA-FrLink.webp');">
+      
+
+<span>LazerTag Academy</span>
+    </a>
+ 
+<a class="franchise-link" href="PAGES/Little Wizards.html" style="background-image: url('IMAGES/LWZ-FrLink.webp');">
+      <span>Little 
+
+Wizards</span>
+    </a>
+<a class="franchise-link" href="PAGES/Littles.html" style="background-image: url('IMAGES/TLT-FrLink.webp');">
+      <span>The 
+
+Littles</span>
     </a>  
 </div>
-  <p align="center">I</p>
-  <div class="franchise-list">
-     
-    <a class="franchise-link" href="PAGES/InspectorGadget.html" style="background-image: url('IMAGES/IPG-FrLink.webp');">
-      <span>Inspector Gadget</span>
-    </a> 
-   </div>
-  <p align="center">J</p>
-  <div class="franchise-list">   
-    <a class="franchise-link" href="PAGES/Jem.html" style="background-image: url('IMAGES/JEM-FrLink.webp');">
-      <span>Jem</span>
-    </a>    
-   </div>
-  <p align="center">M</p>
-  <div class="franchise-list">  
-      <a class="franchise-link" href="PAGES/MOTU.html" style="background-image: url('IMAGES/MOU-FrLink.webp');">
-      <span>Masters of the Universe</span>
-    </a> 
-    <a class="franchise-link" href="PAGES/My Little Pony N' Friends.html" style="background-image: url('IMAGES/MLP-FrLink.webp');">
-      <span>My Little Pony N' Friends</span></a>    
-    </div>
-  <p align="center">P</p>
-  <div class="franchise-list">  
-    <a class="franchise-link" href="PAGES/PolePosition.html" style="background-image: url('IMAGES/PPS-FrLink.webp');">
-      <span>Pole Position</span></a>    
-     </div>
-  <p align="center">R</p>
+
+
+
+<p align="center">M</p>
   <div class="franchise-list"> 
+<a class="franchise-link" href="PAGES/MadBalls.html" style="background-image: url('IMAGES/MBL-FrLink.webp');">
+      
+
+<span>MadBalls</span>
+    </a> 
+   
+<a class="franchise-link" href="PAGES/MASK.html" style="background-image: url('IMAGES/MSK-FrLink.webp');">
+      
+
+<span>M.A.S.K.</span>
+    </a>
+<a class="franchise-link" href="PAGES/Mighty Orbots.html" style="background-image: url('IMAGES/MOB-FrLink.webp');">
+      
+
+<span>Mighty Orbots</span>
+    </a>
+<a class="franchise-link" href="PAGES/Monster In My Pocket.html" style="background-image: url('IMAGES/MMP-FrLink.webp');">
+      
+
+<span>Monster In My Pocket</span>
+    </a>
+<a class="franchise-link" href="PAGES/MoonDreamers.html" style="background-image: url('IMAGES/MDM-FrLink.webp');">
+      
+
+<span>MoonDreamers</span>
+    </a>  
+<a class="franchise-link" href="PAGES/MOTU.html" style="background-image: url('IMAGES/MOU-FrLink.webp');">
+      <span>Masters of 
+
+the Universe</span>
+    </a>
+<a class="franchise-link" href="PAGES/MrT.html" style="background-image: url('IMAGES/MRT-FrLink.webp');">
+      <span>Mister T</span>
+   
+
+ </a>
+<a class="franchise-link" href="PAGES/Muppet Babies.html" style="background-image: url('IMAGES/MPB-FrLink.webp');">
+      
+
+<span>Muppet Babies</span>
+    </a> 
+    
+<a class="franchise-link" href="PAGES/My Little Pony N' Friends.html" style="background-image: url('IMAGES/MLP-FrLink.webp');">
+      
+
+<span>My Little Pony N' Friends</span></a> 
+<a class="franchise-link" href="PAGES/Mysterious Cities of Gold.html" style="background-image: url('IMAGES/MCG-FrLink.webp');">
+      
+
+<span>Mysterious Cities of Gold</span>
+    </a>   
+    
+</div>
+  
+
+
+<p align="center">P</p>
+  <div class="franchise-list">
+<a class="franchise-link" href="PAGES/NAO Flash Gordon.html" style="background-image: url('IMAGES/NFG-FrLink.webp');">
+      
+
+<span>The New Adventures of Flash Gordon</span></a>
+<a class="franchise-link" href="PAGES/NAO Jonny Quest.html" style="background-image: url('IMAGES/NJQ-FrLink.webp');">
+      
+
+<span>The New Adventures of Jonny Quest</span></a>
+<a class="franchise-link" href="PAGES/NAO Superman.html" style="background-image: url('IMAGES/NSM-FrLink.webp');">
+      <span>The 
+
+New Adventures of Superman</span></a>
+<a class="franchise-link" href="PAGES/NAO Lone Ranger.html" style="background-image: url('IMAGES/NLR-FrLink.webp');">
+      
+
+<span>The New Adventures of the Lone Ranger</span></a>
+<a class="franchise-link" href="PAGES/NAO Zorro.html" style="background-image: url('IMAGES/NZR-FrLink.webp');">
+      <span>The New 
+
+Adventures of Zorro</span></a>
+</div>
+
+
+
+<p align="center">P</p>
+  <div class="franchise-list"> 
+<a class="franchise-link" href="PAGES/PacMan.html" style="background-image: url('IMAGES/PMN-FrLink.webp');">
+      <span>Pac-
+
+Man</span></a>
+<a class="franchise-link" href="PAGES/PawPaws.html" style="background-image: url('IMAGES/PAW-FrLink.webp');">
+      
+
+<span>PawPaws</span></a>
+<a class="franchise-link" href="PAGES/Popples.html" style="background-image: url('IMAGES/PPL-FrLink.webp');">
+      
+
+<span>Popples</span></a> 
+    
+<a class="franchise-link" href="PAGES/PolePosition.html" style="background-image: url('IMAGES/PPS-FrLink.webp');">
+      <span>Pole 
+
+Position</span></a> 
+<a class="franchise-link" href="PAGES/Pound Puppies.html" style="background-image: url('IMAGES/POU-FrLink.webp');">
+      
+
+<span>Pound Puppies</span></a>  
+<a class="franchise-link" href="PAGES/Pryde of the X-Men.html" style="background-image: url('IMAGES/PXM-FrLink.webp');">
+      
+
+<span>Pryde of the X-Men</span></a>
+<a class="franchise-link" href="PAGES/Punky Brewster.html" style="background-image: url('IMAGES/PBS-FrLink.webp');">
+      
+
+<span>Punky Brewster</span></a> 
+     
+
+
+</div>
+  
+
+
+
+<p align="center">R</p>
+  <div class="franchise-list"> 
+<a class="franchise-link" href="PAGES/Raccoons.html" style="background-image: url('IMAGES/TRC-FrLink.webp');">
+      <span>The 
+
+Raccoons</span>
+    </a>
 <a class="franchise-link" href="PAGES/Rainbow Brite.html" style="background-image: url('IMAGES/RBB-FrLink.webp');">
-      <span>Rainbow Brite</span>
-    </a>    
-   </div>
-  <p align="center">S</p>
-  <div class="franchise-list">   
-    <a class="franchise-link" href="PAGES/Sectaurs.html" style="background-image: url('IMAGES/SWS-FrLink.webp');">
-      <span>Sectaurs: Warriors of Symbion</span></a>    
       
-    <a class="franchise-link" href="PAGES/SheRa.html" style="background-image: url('IMAGES/SHE-FrLink.webp');">
-      <span>She-Ra: Princess of Power</span>  </a>    
-     
-    <a class="franchise-link" href="PAGES/SilverHawks.html" style="background-image: url('IMAGES/SVH-FrLink.webp');">
-      <span>SilverHawks</span>
-    </a>   
+
+<span>Rainbow Brite</span>
+    </a>
+<a class="franchise-link" href="PAGES/Rambo FOF.html" style="background-image: url('IMAGES/RAM-FrLink.webp');">
+      <span>Rambo: 
+
+Force of Freedom</span>
+    </a> 
+<a class="franchise-link" href="PAGES/Richie Rich.html" style="background-image: url('IMAGES/RCR-FrLink.webp');">
+      <span>Richie 
+
+Rich</span>
+    </a> 
+<a class="franchise-link" href="PAGES/Rickety Rocket.html" style="background-image: url('IMAGES/RIK-FrLink.webp');">
+      
+
+<span>Rickety Rocket</span>
+    </a>
+<a class="franchise-link" href="PAGES/Ring Raiders.html" style="background-image: url('IMAGES/RRD-FrLink.webp');">
+      <span>Ring 
+
+Raiders</span>
+    </a>  
+   
+<a class="franchise-link" href="PAGES/Robocop.html" style="background-image: url('IMAGES/RBC-FrLink.webp');">
+      
+
+<span>RoboCop</span>
+    </a>
+<a class="franchise-link" href="PAGES/Robotech.html" style="background-image: url('IMAGES/RBT-FrLink.webp');">
+      
+
+<span>Robotech</span>
+    </a>
+<a class="franchise-link" href="PAGES/Robotix.html" style="background-image: url('IMAGES/RBX-FrLink.webp');">
+      
+<span>Robotix</span>
+    </a>
+<a class="franchise-link" href="PAGES/Rubic Cube.html" style="background-image: url('IMAGES/RAC-FrLink.webp');">
+      
+<span>Rubic The Amazing Cube</span>
+    </a>
+</div>
+  
+
+
+
+
+<p align="center">S</p>
+  <div class="franchise-list">
+<a class="franchise-link" href="PAGES/Sabre Rider.html" style="background-image: url('IMAGES/SSS-FrLink.webp');">
+      <span>Sabre 
+
+Rider and the Star Sheriffs</span></a>   
     
-    <a class="franchise-link" href="PAGES/SpiderManAmazingFriends.html" style="background-image: url('IMAGES/SAF-FrLink.webp');">
-      <span>Spider-Man and his Amazing Friends</span></a>
+<a class="franchise-link" href="PAGES/Sectaurs.html" style="background-image: url('IMAGES/SWS-FrLink.webp');">
+      <span>Sectaurs: 
+
+Warriors of Symbion</span></a>    
       
-  <a class="franchise-link" href="PAGES/Star Wars Ewoks.html" style="background-image: url('IMAGES/EWK-FrLink.webp');">
-      <span>Star Wars: Ewoks</span>
+   
+<a class="franchise-link" href="PAGES/SheRa.html" style="background-image: url('IMAGES/SHE-FrLink.webp');">
+      <span>She-Ra: 
+
+Princess of Power</span>  </a>
+<a class="franchise-link" href="PAGES/ShirtTales.html" style="background-image: url('IMAGES/STS-FrLink.webp');">
+      
+
+<span>ShirtTales</span></a>    
+     
+    
+<a class="franchise-link" href="PAGES/SilverHawks.html" style="background-image: url('IMAGES/SVH-FrLink.webp');">
+      
+
+<span>SilverHawks</span>
+    </a>
+<a class="franchise-link" href="PAGES/Simpsons.html" style="background-image: url('IMAGES/SMP-FrLink.webp');">
+      <span>The 
+
+Simpsons</span></a> 
+<a class="franchise-link" href="PAGES/SkyCommanders.html" style="background-image: url('IMAGES/SKC-FrLink.webp');">
+      <span>Sky 
+
+Commanders</span></a> 
+<a class="franchise-link" href="PAGES/Smurfs.html" style="background-image: url('IMAGES/SMF-FrLink.webp');">
+      
+
+<span>Smurfs</span></a> 
+<a class="franchise-link" href="PAGES/Snorks.html" style="background-image: url('IMAGES/SNK-FrLink.webp');">
+      
+
+<span>Snorks</span></a>
+<a class="franchise-link" href="PAGES/Space Stars.html" style="background-image: url('IMAGES/SST-FrLink.webp');">
+      <span>Space 
+
+Stars</span></a>
+ 
+<a class="franchise-link" href="PAGES/SpiderMan.html" style="background-image: url('IMAGES/SDM-FrLink.webp');">
+      <span>Spider-
+
+Man</span></a>   
+    
+<a class="franchise-link" href="PAGES/SpiderManAmazingFriends.html" style="background-image: url('IMAGES/SAF-FrLink.webp');">
+      
+
+<span>Spider-Man and his Amazing Friends</span></a>
+<a class="franchise-link" href="PAGES/Spider Woman.html" style="background-image: url('IMAGES/SDW-FrLink.webp');">
+      
+
+<span>Spider Woman</span></a>
+<a class="franchise-link" href="PAGES/Spiral Zone.html" style="background-image: url('IMAGES/SRZ-FrLink.webp');">
+      <span>Spiral 
+
+Zone</span></a>
+<a class="franchise-link" href="PAGES/Sport Billy.html" style="background-image: url('IMAGES/SPB-FrLink.webp');">
+      <span>Sport 
+
+Billy</span></a>
+
+<a class="franchise-link" href="PAGES/StarBlazers.html" style="background-image: url('IMAGES/SBZ-FrLink.webp');">
+      
+
+<span>StarBlazers</span></a>
+<a class="franchise-link" href="PAGES/StarCom.html" style="background-image: url('IMAGES/SCM-FrLink.webp');">
+      <span>StarCom: 
+
+The US Space Force</span></a>      
+  
+<a class="franchise-link" href="PAGES/Star Wars Ewoks.html" style="background-image: url('IMAGES/EWK-FrLink.webp');">
+      
+
+<span>Star Wars: Ewoks</span>
   </a>
 
-    <a class="franchise-link" href="PAGES/Star Wars Droids.html" style="background-image: url('IMAGES/DRD-FrLink.webp');">
-      <span>Star Wars: Droids</span>
-  </a>
-     </div>
-  <p align="center">T</p>
-  <div class="franchise-list"> 
-      <a class="franchise-link" href="PAGES/ThunderCats.html" style="background-image: url('IMAGES/TDC-FrLink.webp');">
-      <span>ThunderCats</span>
-    </a>
-     
-    <a class="franchise-link" href="PAGES/transformers.html" style="background-image: url('IMAGES/TFM-FrLink.webp');">
-      <span>Transformers</span>
-    </a>    
-   </div>
-  <p align="center">U</p>
-  <div class="franchise-list">
-    <a class="franchise-link" href="PAGES/ulysses31.html" style="background-image: url('IMAGES/U31-FrLink.webp');">
-      <span>Ulysses 31</span>
-    </a>
-  </div>
-    <p align="center">W</p>
-  <div class="franchise-list">
-    <a class="franchise-link" href="PAGES/Wheeled Warriors.html" style="background-image: url('IMAGES/JWW-FrLink.webp');">
-      <span>Wheeled Warriors</span>
-    </a>   
     
-  </div>
+<a class="franchise-link" href="PAGES/Star Wars Droids.html" style="background-image: url('IMAGES/DRD-FrLink.webp');">
+      
 
-  <!-- 
+<span>Star Wars: Droids</span>
+  </a>
+<a class="franchise-link" href="PAGES/Strawberry Shortcake.html" style="background-image: url('IMAGES/SBS-FrLink.webp');">
+      
+
+<span>Strawberry Shortcake</span></a>
+<a class="franchise-link" href="PAGES/SuperFriends.html" style="background-image: url('IMAGES/SPF-FrLink.webp');">
+      
+
+<span>SuperFriends</span></a>
+ 
+<a class="franchise-link" href="PAGES/Sylvanian Families.html" style="background-image: url('IMAGES/SVF-FrLink.webp');">
+      
+
+<span>Sylvanian Families</span></a>   
+ </div>
+  
+
+<p align="center">T</p>
+  <div class="franchise-list">
+<a class="franchise-link" href="PAGES/TMNT.html" style="background-image: url('IMAGES/TMN-FrLink.webp');">
+      <span>Teenage 
+
+Mutant Ninja Turtles</span></a>
+<a class="franchise-link" href="PAGES/Teen Force.html" style="background-image: url('IMAGES/TFC-FrLink.webp');">
+      <span>Teen 
+
+Force</span></a> 
+<a class="franchise-link" href="PAGES/Thundarr.html" style="background-image: url('IMAGES/TTB-FrLink.webp');">
+      <span>Thundarr 
+
+the Barbarian</span></a>
+      
+<a class="franchise-link" href="PAGES/ThunderCats.html" style="background-image: url('IMAGES/TDC-FrLink.webp');">
+      
+
+<span>ThunderCats</span>
+    </a>
+<a class="franchise-link" href="PAGES/TigerSharks.html" style="background-image: url('IMAGES/TGS-FrLink.webp');">
+      
+
+<span>TigerSharks</span></a>
+     
+    
+<a class="franchise-link" href="PAGES/transformers.html" style="background-image: url('IMAGES/TFM-FrLink.webp');">
+      
+
+<span>Transformers</span>
+    </a>    
+   
+<a class="franchise-link" href="PAGES/Turbo Teen.html" style="background-image: url('IMAGES/TBT-FrLink.webp');">
+      <span>Turbo 
+
+Teen</span></a>
+</div>
+  
+
+<p align="center">U</p>
+  <div class="franchise-list">
+    
+<a class="franchise-link" href="PAGES/ulysses31.html" style="background-image: url('IMAGES/U31-FrLink.webp');">
+      <span>Ulysses 
+
+31</span>
+    </a>
+  </div>
+  
+
+<p align="center">V</p>
+  <div class="franchise-list">
+    
+<a class="franchise-link" href="PAGES/Visionaries.html" style="background-image: url('IMAGES/VIS-FrLink.webp');">
+      <span>Visionaries: 
+
+Knights of the Magical Light</span>
+    </a>
+  
+<a class="franchise-link" href="PAGES/VoltronDOU.html" style="background-image: url('IMAGES/VDU-FrLink.webp');">
+      <span>Voltron: 
+
+Defender of the Universe</span>
+    </a>
+<a class="franchise-link" href="PAGES/Vytor Star Champion.html" style="background-image: url('IMAGES/VSC-FrLink.webp');">
+      
+
+<span>Vytor: The Star Champion</span>
+    </a>
+</div>
+    
+
+
+<p align="center">W</p>
+  <div class="franchise-list">
+
+<a class="franchise-link" href="PAGES/WildFire.html" style="background-image: url('IMAGES/WFR-FrLink.webp');">
+      
+
+<span>WildFire</span>
+    </a>
+<a class="franchise-link" href="PAGES/Winnie The Pooh.html" style="background-image: url('IMAGES/WTP-FrLink.webp');">
+      
+
+<span>Winnie The Pooh</span>
+    </a>
+<a class="franchise-link" href="PAGES/WolfRock.html" style="background-image: url('IMAGES/WRT-FrLink.webp');">
+      <span>Wolf Rock 
+
+TV</span>
+    </a>
+<a class="franchise-link" href="PAGES/Worlds Greatest SuperFriends.html" style="background-image: url('IMAGES/WGS-FrLink.webp');">
+  
+
+    <span>The World's Greatest SuperFriends</span>
+    </a>
+ <a class="franchise-link" href="PAGES/Wuzzles.html" style="background-image: url('IMAGES/WZL-FrLink.webp');">
+      <span>The 
+
+Wuzzles</span>
+    </a>  
+    
+  
+</div>
+
+  
+
+
+
+
+<!-- 
 
 Footer -->
   <footer>
 
     The Asteroid 84 Logo Database is a non-commercial archival 
 
-project dedicated to preserving and documenting the graphic design history of classic 
+project dedicated to preserving and documenting 
+
+the graphic design history of classic 
 
 cartoons, toys, comics, and related media. All recreated logos and associated properties 
 
-remain the copyrights and trademarks of their respective artists, creators, studios, 
+remain the 
 
-publishers, and rights holders. This archive exists solely for historical, educational, and 
+copyrights and trademarks of their respective artists, creators, studios, 
+
+publishers, and rights holders. This archive exists solely for historical, 
+
+educational, and 
 
 reference purposes.
 
