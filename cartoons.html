@@ -1,475 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cartoon Franchises - Asteroid 84 Logo Database</title>
 
-name="viewport" content="width=device-width, initial-
-
-scale=1.0">
-  <title>Cartoon 
-
-Franchises - Asteroid 84 Logo Database</title>
-
-  <style>
+<style>
 @font-face {
-    font-family: 
-
-'IBMDOS';
-
-    src: url
-
-('FONTS/IBM_DOS_ISO8.woff2') format('woff2');
-
-    font-weight: 
-
-normal;
-    font-style: normal;
+  font-family: 'IBMDOS';
+  src: url('FONTS/IBM_DOS_ISO8.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
-    body {
-      margin: 0;
-      padding: 0;
-      
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #03001e;
+  font-family: 'IBMDOS', monospace;
+  color: #39ff88;
+  overflow-x: hidden;
+}
 
-background-color: 
+/* Background */
+.grid-container {
+  position: fixed;
+  inset: 0;
+  perspective: 500px;
+  z-index: -1;
+  overflow: hidden;
+  background: url("IMAGES/starfield.png") center/cover no-repeat;
+}
 
-#03001e;
-      font-family: 'IBMDOS', monospace;
-      color: #39ff88;;
-      overflow-x: 
+.grid {
+  position: absolute;
+  bottom: -250px;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image:
+    linear-gradient(to right, #00f0ff 2px, transparent 2px),
+    linear-gradient(to bottom, #00f0ff 2px, transparent 2px);
+  background-size: 60px 60px;
+  transform: rotateX(60deg);
+  animation: gridMove 10s linear infinite;
+}
 
-hidden;
-    }
-
-    /* Animated Background 
-
-Grid */
-    .grid-container {
-      position: fixed;
-      top: 
-
-0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      perspective: 500px;
-      z-index: -1;
-     
-
- 
-
-overflow: hidden;
-      background: url("IMAGES/starfield.png") center center / cover no-
-
-repeat;
-    }
-
-    .grid {
-      position: absolute;
-      bottom: 
-
--250px;
-      left: -50%;
-      width: 
-
-200%;
-      height: 200%;
-      background-image:
-        linear-gradient(to right, #00f0ff 2px, 
-
-transparent 2px),
-     
-
-   linear-gradient(to bottom, #00f0ff 2px, transparent 2px);
-      
-
-background-size: 60px 60px;
-      transform: rotateX(60deg);
-      animation: 
-
-gridMove 10s 
-
-linear infinite;
-    }
-
-    @keyframes gridMove {
-      0% {
-        transform: rotateX(60deg) 
-
-translateY(0);
-      }
-
-      100% {
-        
-
-transform: rotateX(60deg) translateY(60px);
-      }
-    }
-
-    
+@keyframes gridMove {
+  from { transform: rotateX(60deg) translateY(0); }
+  to { transform: rotateX(60deg) translateY(60px); }
+}
 
 /* Header */
-    header {
-      text-align: center;
-      padding: 3rem 1rem 2rem;
-    }
+header {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+}
 
-    
+header img {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
 
-header 
+header p {
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-top: 1rem;
+}
 
-img {
-      display: block;
-      margin: 0 auto;
-      max-width: 300px;
-      width: 100%;
-      
-
-height: auto;
-    }
-
-    header p {
-      color: 
-
-#FFFFFF;
-      font-size: 1rem;
-      letter-spacing: 
-
-2px;
-      margin-top: 1rem;
-    }
-
-    
-
-    /* Franchise List */
-    .franchise-list {
-  max-width: 
-
-900px;
-  
-
-margin: 0 auto;
+/* Franchise grid */
+.franchise-list {
+  max-width: 900px;
+  margin: 0 auto;
   padding: 2rem;
   display: grid;
-  grid-template-columns: repeat(3, 
-
-1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  position: relative;
-      overflow: hidden;
+  overflow: hidden;
 }
-    
 
-.franchise-link::after {
-  content: 
+/* Links */
+.franchise-link {
+  display: block;
+  position: relative;
+  overflow: hidden;
 
-"";
+  background-color: #100b21;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
+  border: 2px solid #00f0ff;
+  border-radius: 12px;
+
+  padding: 1.25rem 1.5rem;
+
+  color: #fff;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 0 12px rgba(0, 240, 255, 0.2),
+    inset 0 0 10px rgba(0, 240, 255, 0.08);
+}
+
+/* Remove underline in all states */
+.franchise-link,
+.franchise-link:visited,
+.franchise-link:hover,
+.franchise-link:active {
+  text-decoration: none;
+}
+
+/* Overlay */
+.franchise-link::before {
+  content: "";
   position: absolute;
   inset: 0;
-
-  background: linear-gradient(
-    rgba(255,255,255,0.03) 
-
-80%,
-    rgba
-
-(0,0,0,0.2) 50%
-  );
-
-  background-size: 100% 4px;
-
-  pointer-events: none;
-
-  
-
-border-radius: 12px;
-}
-    
-/* tablet */
-@media (max-width: 900px) {
-  
-
-.franchise-list {
-    grid-
-
-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* phone */
-@media (max-width: 600px) {
-  .franchise-
-
-list {
-    grid-template-columns: 
-
-1fr;
-  }
-}
-    
-    .franchise-link {
-      display: block;
-     
-
-background-color: #100b21;
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-      border: 2px solid #00f0ff;
-      border-radius: 12px;
-      
-
-padding: 1.25rem 1.5rem;
-      color: #ffffff;
-      text-
-
-decoration: none;
-      font-size: 
-
-0.75rem;
-      letter-spacing: 1px;
-  
-  transition: all 0.3s ease;
-      box-shadow:
-        0 0 
-
-12px rgba(0, 240, 255, 
-
-0.2),
-        inset 0 0 10px rgba(0, 240, 255, 0.08);
-      position: 
-
-relative;
-overflow: hidden;
-    }
-   
-    .franchise-link::before {
-  content: "";
-
-  position: 
-
-absolute;
-  
-
-inset: 0;
-
   background: rgba(0,0,0,0.2);
-
   z-index: 0;
 }
-    .franchise-link span {
-  position: 
 
-relative;
-  z-index: 1;  text-shadow:
-  -2px -2px 
+.franchise-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(255,255,255,0.03) 80%,
+    rgba(0,0,0,0.2) 50%
+  );
+  pointer-events: none;
+}
 
-0 #000,
-   2px -2px 0 #000,
-  -2px  2px 0 #000,
-   2px  2px 0 #000,
-   0 0 4px rgba(0,0,0,1),
-   0 0 8px rgba(0,0,0,1);}
+/* Text */
+.franchise-link span {
+  position: relative;
+  z-index: 1;
+  text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+     0 0 8px rgba(0,0,0,1);
+}
 
-    
-
+/* Hover */
 .franchise-link:hover {
-      transform: scale(1.05);
-      border-color: 
-
-#39ff88;
-      box-shadow:
-        0 0 20px rgba(57, 255, 136, 0.4),
-        inset 0 
-
-0 15px rgba
-
-(57, 255, 136, 0.15);
-    }
-          .site-logo-container {
-    position: fixed;
-    top: 20px;
-    left: 
-
-20px;
-    z-index: 10000;
-    padding-
-
-bottom: 20px;
+  transform: scale(1.05);
+  border-color: #39ff88;
+  box-shadow:
+    0 0 20px rgba(57, 255, 136, 0.4),
+    inset 0 0 15px rgba(57, 255, 136, 0.15);
 }
 
-/* DROPDOWN MENU */
-
-.logo-
-
-dropdown {
-    position: absolute;
-    top: 40px;
-    left: 50%;
-
-    display: flex;
-    flex-direction: 
-
-column;
-    gap: 10px;
-
-    opacity: 0;
-    visibility: hidden;
-
-    transform: translateX(-50%) 
-
-translateY(-10px);
-
-    pointer-events: none;
-
-    transition:
-    
-
-    opacity 0.2s ease,
-        
-
-transform 0.2s ease,
-        visibility 0.2s ease;
+/* Logo dropdown */
+.site-logo-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10000;
 }
-    
 
-/* SHOW ON HOVER */
+.logo-dropdown {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 
-.site-logo-
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(-10px);
+  pointer-events: none;
 
-container:hover .logo-dropdown 
+  transition: all 0.2s ease;
+}
 
-{
-    opacity: 1;
-    visibility: visible;
-
-    transform: translateX
-
-(-50%) translateY(0);
-   pointer-events: auto;
+.site-logo-container:hover .logo-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
 }
 
 .logo-dropdown img {
-    width: 80px;
-    
-
-height: auto;
-    display: block;
-
-    transition:
-        transform 0.15s ease,
-        filter 0.15s 
-
-ease;
+  width: 80px;
+  height: auto;
+  transition: transform 0.15s ease, filter 0.15s ease;
 }
 
 .logo-dropdown img:hover {
-    transform: scale
-
-(1.05);
-
-    filter:
-        drop-shadow(0 0 
-
-8px var(--glow));
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 8px var(--glow));
 }
 
-    @media (max-width: 768px) {
-        body::before {
-            
+/* Footer */
+footer {
+  text-align: center;
+  padding: 3rem 2rem 2rem;
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  max-width: 1000px;
+  margin: 0 auto;
+  opacity: 0.8;
+}
 
-background-size: 35px 
-
-35px;
-        }
-
-        .container {
-            padding-top: 40px;
-        }
- 
-        
-
-.site-logo {
-        top: 20px;
-        left: 20px;
-    }
-   
-@media (max-width: 
-
-900px) {
-
-    .gallery-
-
-item {
-        flex: 0 1 calc(33.333% - 12px);
-    }
+/* Responsive */
+@media (max-width: 900px) {
+  .franchise-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 600px) {
-
-    .gallery-item 
-
-{
-        flex: 0 1 calc(50% - 
-
-12px);
-    }
-}    
-    
+  .franchise-list {
+    grid-template-columns: 1fr;
+  }
 }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      
-
-padding: 3rem 2rem 2rem;
-      color: #FFFFFF;
-      font-size: 0.75rem;
-      
-
-line-height: 1.6;
- 
-
-     max-width: 1000px;
-      margin: 0 auto;
-      opacity: 0.8;
-    }
-
-  </style>
-
+</style>
 </head>
 
 <body>
 
-  
+<div class="grid-container">
+  <div class="grid"></div>
+</div>
 
-<!-- Animated Grid -->
-  <div 
-
-class="grid-container">
-    <div class="grid"></div>
-  </div>
-
-  
-
-<!-- Header -->
-  <header>
-
-    <img src="Asteroid84 CARTOONS.png" alt="Cartoon 
-
-Franchises">
-
-    <p>
-      Browse Cartoon Franchise Logo Archives<br>
- We post new logos 
-
-every week!
-    </p>
-
-  </header>
+<header>
+  <img src="Asteroid84 CARTOONS.png" alt="Cartoon Franchises">
+  <p>
+    Browse Cartoon Franchise Logo Archives<br>
+    We post new logos every week!
+  </p>
+</header>
 
   <!-- Franchise 
 
