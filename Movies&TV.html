@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movies and Television - Asteroid 84 Logo Database</title>
+
+<style>
+@font-face {
+  font-family: 'IBMDOS';
+  src: url('FONTS/IBM_DOS_ISO8.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+/* 179 Cartoons Total */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #03001e;
+  font-family: 'IBMDOS', monospace;
+  color: #39ff88;
+  overflow-x: hidden;
+}
+
+/* Background */
+.grid-container {
+  position: fixed;
+  inset: 0;
+  perspective: 500px;
+  z-index: -1;
+  overflow: hidden;
+  background: url("IMAGES/starfield.png") center/cover no-repeat;
+}
+
+.grid {
+  position: absolute;
+  bottom: -250px;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image:
+    linear-gradient(to right, #8400ff 2px, transparent 2px),
+    linear-gradient(to bottom, #8400ff 2px, transparent 2px);
+  background-size: 60px 60px;
+  transform: rotateX(60deg);
+  animation: gridMove 10s linear infinite;
+}
+
+@keyframes gridMove {
+  from { transform: rotateX(60deg) translateY(0); }
+  to { transform: rotateX(60deg) translateY(60px); }
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+}
+
+header img {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+header p {
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-top: 1rem;
+}
+
+/* Franchise grid */
+.franchise-list {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  overflow: hidden;
+}
+
+/* Links */
+.franchise-link {
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+  background-color: #100b21;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border: 2px solid #8400ff;
+  border-radius: 12px;
+
+  padding: 1.25rem 1.5rem;
+
+  color: #fff;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 0 12px rgba(132, 0, 255, 0.2),
+    inset 0 0 10px rgba(132, 0, 255, 0.08);
+}
+
+/* Remove underline in all states */
+.franchise-link,
+.franchise-link:visited,
+.franchise-link:hover,
+.franchise-link:active {
+  text-decoration: none;
+}
+
+/* Overlay */
+.franchise-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.2);
+  z-index: 0;
+}
+
+.franchise-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(255,255,255,0.03) 50%,
+    rgba(0,0,0,0.2) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+/* Text */
+.franchise-link span {
+  position: relative;
+  z-index: 1;
+  text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+     0 0 8px rgba(0,0,0,1);
+}
+
+/* Hover */
+.franchise-link:hover {
+  transform: scale(1.05);
+  border-color: #39ff88;
+  box-shadow:
+    0 0 20px rgba(57, 255, 136, 0.4),
+    inset 0 0 15px rgba(57, 255, 136, 0.15);
+}
+
+/* Logo dropdown */
+.site-logo-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10000;
+}
+
+.logo-dropdown {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(-10px);
+  pointer-events: none;
+
+  transition: all 0.2s ease;
+}
+
+.site-logo-container:hover .logo-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.logo-dropdown img {
+  width: 80px;
+  height: auto;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.logo-dropdown img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 8px var(--glow));
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 3rem 2rem 2rem;
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  max-width: 1000px;
+  margin: 0 auto;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .franchise-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .franchise-list {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="grid-container">
+  <div class="grid"></div>
+</div>
+
+<header>
+  <img src="Asteroid84 MOVIES.png" alt="Movies & TV Franchises">
+  <p>
+    Browse Movie & Television Franchise Logo Archives<br>
+    We post new logos every week!
+  </p>
+</header>
+
+  <!-- Franchise 
+
+Links -->
+<p align="center">A</p>
+  <div class="franchise-list">
+<a class="franchise-link" href="PAGES/ATeam.html" style="background-image: url('IMAGES/TAT-FrLink.webp');">
+      <span>The A-Team</span> </a>
+  </div>
+
+  
+  <p align="center">C</p>
+  <div class="franchise-list">
+<a class="franchise-link" href="PAGES/Cagney Lacey.html" style="background-image: url('IMAGES/CAL-FrLink.webp');">
+      <span>Cagney & Lacey</span> </a>
+<a class="franchise-link" href="PAGES/Cheers.html" style="background-image: url('IMAGES/CHE-FrLink.webp');">
+      <span>Cheers</span> </a>
+  </div>
+  
+<p align="center">G</p>
+  <div class="franchise-list">
+<a class="franchise-link" href="PAGES/Galactica 1980.html" style="background-image: url('IMAGES/G80-FrLink.webp');">
+      <span>Galactica 1980</span> </a>
+<a class="franchise-link" href="PAGES/Greatest American Hero.html" style="background-image: url('IMAGES/GAH-FrLink.webp');">
+      <span>The Greatest American Hero</span> </a>
+  </div>
+
+  <p align="center">F</p>
+  <div class="franchise-list">
+<a class="franchise-link" href="PAGES/Fall Guy.html" style="background-image: url('IMAGES/TFG-FrLink.webp');">
+      <span>The Fall Guy</span> </a>
+<a class="franchise-link" href="PAGES/Family Ties.html" style="background-image: url('IMAGES/FLT-FrLink.webp');">
+      <span>Family Ties</span> </a>
+<a class="franchise-link" href="PAGES/Fraggle Rock.html" style="background-image: url('IMAGES/FRR-FrLink.webp');">
+      <span>Fraggle Rock</span> </a>
+  </div>
+
+  <p align="center">H</p>
+  <div class="franchise-list">
+<a class="franchise-link" href="PAGES/Hardcastle McCormick.html" style="background-image: url('IMAGES/HAM-FrLink.webp');">
+      <span>Hardcastle & McCormick</span> </a>
+<a class="franchise-link" href="PAGES/Hill Street Blues.html" style="background-image: url('IMAGES/HSB-FrLink.webp');">
+      <span>Hill Street Blues</span> </a>
+<a class="franchise-link" href="PAGES/Hitchhiker.html" style="background-image: url('IMAGES/THH-FrLink.webp');">
+      <span>The Hitchhiker</span> </a>
+  </div>
+
+<p align="center">J</p>
+  <div class="franchise-list">
+<a class="franchise-link" href="PAGES/Joy of Painting.html" style="background-image: url('IMAGES/JOP-FrLink.webp');">
+      <span>The Joy of Painting</span> </a>
+  </div>
+
+<p align="center">K</p>
+  <div class="franchise-list">
+<a class="franchise-link" href="PAGES/Knight Rider.html" style="background-image: url('IMAGES/KNR-FrLink.webp');">
+      <span>Knight Rider</span> </a>
+  </div>
+
+<p align="center">L</p>
+  <div class="franchise-list">
+<a class="franchise-link" href="PAGES/Love Connection.html" style="background-image: url('IMAGES/LCN-FrLink.webp');">
+      <span>Love Connection</span> </a>
+  </div>
+  
+<p align="center">M</p>
+  <div class="franchise-list">
+<a class="franchise-link" href="PAGES/Magnum PI.html" style="background-image: url('IMAGES/MPI-FrLink.webp');">
+      <span>Magnum P.I.</span> </a>
+<a class="franchise-link" href="PAGES/Mamas Family.html" style="background-image: url('IMAGES/MMF-FrLink.webp');">
+      <span>Mama's Family</span> </a>
+<a class="franchise-link" href="PAGES/Manimal.html" style="background-image: url('IMAGES/MNM-FrLink.webp');">
+      <span>Manimal</span> </a>
+<a class="franchise-link" href="PAGES/Mr Wizard.html" style="background-image: url('IMAGES/MWW-FrLink.webp');">
+      <span>Mr Wizard's World</span> </a>
+  </div>
+  
+<p align="center">N</p>
+  <div class="franchise-list">
+<a class="franchise-link" href="PAGES/Newhart.html" style="background-image: url('IMAGES/NWH-FrLink.webp');">
+      <span>Newhart</span> </a>
+<a class="franchise-link" href="PAGES/NN The News.html" style="background-image: url('IMAGES/NNN-FrLink.webp');">
+      <span>Not Necessarily The News</span> </a>
+  </div>
+
+<p align="center">O</p>
+  <div class="franchise-list">
+<a class="franchise-link" href="PAGES/One To Grow On.html" style="background-image: url('IMAGES/12G-FrLink.webp');">
+      <span>One To Grow On</span> </a>
+  </div>
+
+<p align="center">P</p>
+  <div class="franchise-list">
+<a class="franchise-link" href="PAGES/Police Squad.html" style="background-image: url('IMAGES/PLS-FrLink.webp');">
+      <span>Police Squad!</span> </a>
+<a class="franchise-link" href="PAGES/Press Your Luck.html" style="background-image: url('IMAGES/PYL-FrLink.webp');">
+      <span>Press Your Luck</span> </a>
+  </div>
+
+<p align="center">R</p>
+  <div class="franchise-list">
+<a class="franchise-link" href="PAGES/Reading Rainbow.html" style="background-image: url('IMAGES/RRB-FrLink.webp');">
+      <span>Reading Rainbow</span> </a>
+<a class="franchise-link" href="PAGES/Remington Steele.html" style="background-image: url('IMAGES/RTS-FrLink.webp');">
+      <span>Remington Steele</span> </a>
+<a class="franchise-link" href="PAGES/Ripleys BION.html" style="background-image: url('IMAGES/RBN-FrLink.webp');">
+      <span>Ripley's Believe It Or Not!</span> </a>
+  </div>
+
+  <p align="center">S</p>
+  <div class="franchise-list">
+<a class="franchise-link" href="PAGES/Silver Spoons.html" style="background-image: url('IMAGES/SVS-FrLink.webp');">
+      <span>Silver Spoons</span> </a>
+<a class="franchise-link" href="PAGES/Star Search.html" style="background-image: url('IMAGES/SSC-FrLink.webp');">
+      <span>Star Search</span> </a>
+  </div>
+
+<p align="center">T</p>
+  <div class="franchise-list">
+<a class="franchise-link" href="PAGES/Tales Dark Side.html" style="background-image: url('IMAGES/TDS-FrLink.webp');">
+      <span>Tales From The Dark Side</span> </a>
+<a class="franchise-link" href="PAGES/TJ Hooker.html" style="background-image: url('IMAGES/TJH-FrLink.webp');">
+      <span>T.J. Hooker</span> </a>
+  </div>
+
+<p align="center">V</p>
+  <div class="franchise-list">
+<a class="franchise-link" href="PAGES/V.html" style="background-image: url('IMAGES/VMS-FrLink.webp');">
+      <span>V: The Miniseries</span> </a>
+  </div>
+
+<p align="center">W</p>
+  <div class="franchise-list">
+<a class="franchise-link" href="PAGES/Webster.html" style="background-image: url('IMAGES/WBS-FrLink.webp');">
+      <span>Webster</span> </a>
+<a class="franchise-link" href="PAGES/Wheel of Fortune.html" style="background-image: url('IMAGES/WOF-FrLink.webp');">
+      <span>Wheel Of Fortune</span> </a>
+<a class="franchise-link" href="PAGES/Wizards & Warriors.html" style="background-image: url('IMAGES/WAW-FrLink.webp');">
+      <span>Wizards & Warriors</span> </a>
+  </div>
+  
+<!-- 
+
+Footer -->
+  <footer>
+
+    The Asteroid 84 Logo Database is a non-commercial archival 
+
+project dedicated to preserving and documenting 
+
+the graphic design history of classic 
+
+cartoons, toys, comics, tv, movies and related media. All recreated logos and associated properties 
+
+remain the 
+
+copyrights and trademarks of their respective artists, creators, studios, 
+
+publishers, and rights holders. This archive exists solely for historical, 
+
+educational, and 
+
+reference purposes.
+
+  </footer>
+
+</body>
+</html>
