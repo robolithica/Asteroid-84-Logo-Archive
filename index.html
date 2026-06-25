@@ -275,6 +275,12 @@ footer p {
   border-color: #39ff88;
   box-shadow: 0 0 15px rgba(57,255,136,0.6);
 }
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap; /* allows stacking on small screens */
+}
   </style>
 
 </head>
@@ -346,15 +352,11 @@ footer p {
   </div>
 
  <footer>
-   <p>
-<a href="Contact.html" class="contact-link">CONTACT US</a>
-   </p>
-   <p>
-<a href="Search.html" class="search-link">SEARCH</a>
-   </p>
-   <p>
-<a href="About.html" class="about-link">ABOUT</a>
-   </p>
+ <div class="footer-links">
+  <a href="Contact.html" class="contact-link">CONTACT US</a>
+  <a href="Search.html" class="search-link">SEARCH</a>
+  <a href="About.html" class="about-link">ABOUT</a>
+</div>
   <p>
     The Asteroid 84 Logo Database is a non-commercial archival project dedicated to preserving and documenting the graphic design history of classic cartoons, toys, comics, and related media. All recreated logos and associated properties remain the copyrights and trademarks of their respective artists, creators, studios, publishers, and rights holders. This archive exists solely for historical, educational, and reference purposes.
   </p>
